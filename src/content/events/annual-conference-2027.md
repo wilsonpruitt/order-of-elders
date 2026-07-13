@@ -1,9 +1,8 @@
 ---
 title: "Río Texas Annual Conference 2027"
-start: 2027-06-16
-location: "Clergy session · ordination · reunion of the order"
+start: 2027-06-14
+end: 2027-06-17
+location: "Hilliard Center, Corpus Christi"
 kind: conference
-draft: true
+draft: false
 ---
-
-<!-- PLACEHOLDER — stand-in text for design review only. -->

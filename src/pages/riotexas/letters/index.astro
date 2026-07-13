@@ -1,11 +1,9 @@
 ---
 import Base from "../../../layouts/Base.astro";
-import { getCollection } from "astro:content";
+import { publishedLetters } from "../../../lib/content";
 import { formatFullDate } from "../../../lib/dates";
 
-const letters = (await getCollection("letters")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const letters = await publishedLetters();
 ---
 <Base
   title="All letters · The Order of Elders"

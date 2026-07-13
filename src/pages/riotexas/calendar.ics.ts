@@ -1,5 +1,12 @@
 import type { APIRoute } from "astro";
-import { getCollection } from "astro:content";
+import { publishedEvents } from "../../lib/content";
+
+/** iCalendar DTEND is exclusive for all-day events: a June 14–17 conference ends June 18. */
+function dayAfter(d: Date): Date {
+  const next = new Date(d);
+  next.setUTCDate(next.getUTCDate() + 1);
+  return next;
+}
 
 function icsDate(d: Date, allDay: boolean): string {
   const pad = (n: number) => String(n).padStart(2, "0");
@@ -13,12 +20,12 @@ function escapeText(s: string): string {
 }
 
 export const GET: APIRoute = async () => {
-  const events = await getCollection("events");
+  const events = await publishedEvents();
 
   const veventBlocks = events
     .map((event) => {
       const start = icsDate(event.data.start, true);
-      const end = icsDate(event.data.end ?? event.data.start, true);
+      const end = icsDate(dayAfter(event.data.end ?? event.data.start), true);
       const lines = [
         "BEGIN:VEVENT",
         `UID:${event.id}@orderofelders.org`,

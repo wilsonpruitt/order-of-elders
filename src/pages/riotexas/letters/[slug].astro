@@ -1,10 +1,11 @@
 ---
 import Base from "../../../layouts/Base.astro";
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
+import { published } from "../../../lib/content";
 import { formatFullDate } from "../../../lib/dates";
 
 export async function getStaticPaths() {
-  const letters = await getCollection("letters");
+  const letters = await published("letters");
   return letters.map((letter) => ({
     params: { slug: letter.id },
     props: { letter },
