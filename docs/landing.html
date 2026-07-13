@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Order of Elders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F2EB;
+  --ink:#23201B;
+  --red:#8A1F2D;
+  --red-deep:#5E1520;
+  --gold:#A5823B;
+  --smoke:#6E675C;
+  --hair:#D8D3C6;
+  --band-w:26px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:17px;
+  line-height:1.65;
+}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.label{
+  font-family:"Archivo",sans-serif;
+  font-weight:600;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+/* ---------- hero: the draped stole ---------- */
+.hero{position:relative;text-align:center;padding:96px 24px 84px;overflow:hidden}
+.stole{
+  position:absolute;top:0;width:var(--band-w);
+  background:linear-gradient(var(--red-deep),var(--red) 30%);
+  height:min(46vh,340px);
+}
+.stole::after{ /* gold fringe */
+  content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 2px,transparent 2px 6px);
+}
+.stole::before{ /* thread cross woven into the band */
+  content:"✛";position:absolute;left:0;right:0;bottom:22px;
+  color:var(--gold);font-size:15px;text-align:center;line-height:1;
+}
+.stole.l{left:calc(50% - 190px)}
+.stole.r{right:calc(50% - 190px)}
+.hero .label{color:var(--smoke)}
+.hero h1{
+  font-family:"EB Garamond",serif;font-weight:500;
+  font-size:clamp(2.7rem,7vw,4.6rem);
+  letter-spacing:.01em;line-height:1.05;
+  margin:.5rem 0 1.6rem;
+}
+.hero blockquote{
+  max-width:560px;margin:0 auto;
+  font-family:"EB Garamond",serif;font-style:italic;
+  font-size:clamp(1.15rem,2.4vw,1.4rem);line-height:1.5;color:var(--red-deep);
+}
+.hero cite{
+  display:block;margin-top:1rem;font-style:normal;
+  font-family:"Archivo",sans-serif;font-size:.72rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);
+}
+@media(max-width:560px){
+  .stole.l{left:16px}.stole.r{right:16px}
+  .hero{padding-top:72px}
+}
+
+/* ---------- fourfold cross grid ---------- */
+.fourfold{padding:24px 0 96px}
+.fourfold .intro{max-width:620px;margin:0 auto 56px;text-align:center;color:var(--smoke)}
+.cross{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;background:var(--red); /* gridlines form the cross */
+  border:1px solid var(--hair);
+  max-width:880px;margin:0 auto;
+}
+.cross section{background:var(--paper);padding:44px 40px}
+.cross h2{
+  font-family:"EB Garamond",serif;font-weight:600;font-size:1.7rem;margin-bottom:.35rem;
+}
+.cross .gk{
+  font-family:"EB Garamond",serif;font-style:italic;color:var(--gold);
+  font-size:.95rem;margin-bottom:.9rem;
+}
+.cross p{font-size:.98rem;color:#3B362E}
+@media(max-width:680px){.cross{grid-template-columns:1fr}}
+
+/* ---------- conferences ---------- */
+.conferences{border-top:1px solid var(--hair);padding:84px 0}
+.conferences .label{color:var(--red)}
+.conferences h2{font-family:"EB Garamond",serif;font-weight:500;font-size:2.2rem;margin:.4rem 0 2rem}
+.confgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:680px){.confgrid{grid-template-columns:1fr}}
+.confcard{
+  border:1px solid var(--hair);background:#FBFAF5;padding:36px 34px;
+  border-top:4px solid var(--red);
+  display:flex;flex-direction:column;gap:.6rem;
+}
+.confcard.invite{border-top-color:var(--gold);background:transparent}
+.confcard h3{font-family:"EB Garamond",serif;font-weight:600;font-size:1.5rem}
+.confcard p{font-size:.97rem;color:#3B362E;flex:1}
+.confcard .go{font-family:"Archivo",sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* ---------- purpose ---------- */
+.purpose{border-top:1px solid var(--hair);padding:84px 0}
+.purpose .cols{display:grid;grid-template-columns:280px 1fr;gap:48px}
+@media(max-width:760px){.purpose .cols{grid-template-columns:1fr;gap:20px}}
+.purpose h2{font-family:"EB Garamond",serif;font-weight:500;font-size:2rem;line-height:1.2}
+.purpose p{margin-bottom:1rem;max-width:58ch}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#CFC9BC;padding:56px 24px;margin-top:24px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:baseline}
+footer .mark{font-family:"EB Garamond",serif;color:#F4F2EB;font-size:1.25rem}
+footer p{font-size:.85rem;max-width:52ch}
+footer .rule{width:100%;height:2px;background:var(--red);margin-bottom:32px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="stole l" aria-hidden="true"></div>
+  <div class="stole r" aria-hidden="true"></div>
+  <p class="label">The United Methodist Church</p>
+  <h1>The Order of Elders</h1>
+  <blockquote>
+    “Elders have a fourfold ministry of Word, Sacrament, Order, and Service and thus serve in the local church and in extension ministries in witness and service of Christ’s love and justice.”
+    <cite>The Book of Discipline, ¶ 340</cite>
+  </blockquote>
+</header>
+
+<main>
+  <div class="fourfold wrap">
+    <p class="intro">The responsibilities of elders are derived from the authority given in ordination. Four charges, held together in one life of ministry.</p>
+    <div class="cross" role="list">
+      <section role="listitem">
+        <h2>Word</h2>
+        <p class="gk">preaching · teaching · counsel</p>
+        <p>To preach the Word of God, lead in worship, teach the Scriptures, and engage the people in study and witness — ensuring the faithful transmission of the Christian faith.</p>
+      </section>
+      <section role="listitem">
+        <h2>Sacrament</h2>
+        <p class="gk">font · table</p>
+        <p>To administer the sacraments of baptism and the Supper of the Lord according to Christ’s ordinance, and to encourage the congregational use of the means of grace.</p>
+      </section>
+      <section role="listitem">
+        <h2>Order</h2>
+        <p class="gk">administration · oversight · connection</p>
+        <p>To order the life of the church for mission and ministry; to equip lay leadership; to administer the provisions of the Discipline within the connection.</p>
+      </section>
+      <section role="listitem">
+        <h2>Service</h2>
+        <p class="gk">servant ministry · servant leadership</p>
+        <p>To embody the teachings of Jesus in servant ministries, building the body of Christ as a caring and giving community, extending the ministry of Christ to the world.</p>
+      </section>
+    </div>
+  </div>
+
+  <section class="conferences">
+    <div class="wrap">
+      <p class="label">Conference chapters</p>
+      <h2>Find your order</h2>
+      <div class="confgrid">
+        <article class="confcard">
+          <h3>Río Texas Conference</h3>
+          <p>Letters from the chair, a public prayer wall, and the calendar of retreats and gatherings for the elders of the Río Texas Annual Conference.</p>
+          <a class="go" href="https://riotexas.orderofelders.org">riotexas.orderofelders.org →</a>
+        </article>
+        <article class="confcard invite">
+          <h3>Your conference</h3>
+          <p>This site is built to grow. If your conference’s order of elders would like a home here — writings, prayer, calendar, and more — we would be glad to help you start one.</p>
+          <a class="go" href="mailto:hello@orderofelders.org">Write to us →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="purpose">
+    <div class="wrap cols">
+      <h2>A covenant community, made visible</h2>
+      <div>
+        <p>Every elder in full connection belongs to an order — a covenant community bound in mutual care and accountability, watching over one another in love. But between annual conferences, that covenant can be hard to see.</p>
+        <p>This site exists to make the ordinary life of the order visible: the letters we write one another, the prayers we carry, the tables we gather around. It begins with what can be shared publicly, and it grows as the order asks it to.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"></div>
+    <span class="mark">The Order of Elders</span>
+    <p>An independent project of elders, for elders. Not an official agency of The United Methodist Church. Quotations from <em>The Book of Discipline of The United Methodist Church</em> are used for the order’s formation and reference.</p>
+  </div>
+</footer>
+
+</body>
+</html>

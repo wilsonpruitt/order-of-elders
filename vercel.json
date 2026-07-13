@@ -1,0 +1,11 @@
+{
+  "framework": "astro",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "riotexas.orderofelders.org" }],
+      "destination": "/riotexas/:path*"
+    }
+  ]
+}

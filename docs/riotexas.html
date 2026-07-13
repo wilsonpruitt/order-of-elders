@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order of Elders · Río Texas Conference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F2EB;
+  --ink:#23201B;
+  --red:#8A1F2D;
+  --red-deep:#5E1520;
+  --gold:#A5823B;
+  --smoke:#6E675C;
+  --hair:#D8D3C6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.65}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.label{font-family:"Archivo",sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h2.sec{font-family:"EB Garamond",serif;font-weight:500;font-size:2rem;margin:.35rem 0 1.6rem}
+.more{font-family:"Archivo",sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* ---------- masthead: the stole seen edge-on ---------- */
+.mast{border-bottom:1px solid var(--hair)}
+.mast .rules{height:10px;background:
+  linear-gradient(var(--red) 0 3px,transparent 3px 7px,var(--red) 7px 10px)}
+.mast .bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 28px;padding:22px 0}
+.mast .conf{color:var(--smoke)}
+.mast h1{font-family:"EB Garamond",serif;font-weight:600;font-size:1.5rem;letter-spacing:.01em}
+nav{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap}
+nav a{font-family:"Archivo",sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+nav a:hover{color:var(--red);text-decoration:none}
+nav .lock{color:var(--smoke)}
+nav .lock::after{content:" ⚿";color:var(--gold)}
+
+/* ---------- greeting ---------- */
+.greet{padding:72px 0 64px;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:end}
+@media(max-width:760px){.greet{grid-template-columns:1fr;gap:28px;padding-top:52px}}
+.greet h2{font-family:"EB Garamond",serif;font-weight:500;font-size:clamp(2rem,4.6vw,3rem);line-height:1.12;margin:.5rem 0 1.1rem}
+.greet p{max-width:56ch;color:#3B362E}
+.cta{
+  display:inline-block;margin-top:1.4rem;padding:14px 26px;
+  background:var(--red);color:#F7F3EA;border:none;
+  font-family:"Archivo",sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;
+}
+.cta:hover{background:var(--red-deep);text-decoration:none}
+.verse{
+  border-left:3px solid var(--gold);padding:6px 0 6px 22px;
+  font-family:"EB Garamond",serif;font-style:italic;font-size:1.15rem;color:var(--red-deep);
+}
+.verse cite{display:block;margin-top:.7rem;font-style:normal;font-family:"Archivo",sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke)}
+
+/* ---------- prayer wall ---------- */
+.prayers{border-top:1px solid var(--hair);padding:72px 0}
+.prayers .head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.wall{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+@media(max-width:860px){.wall{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.wall{grid-template-columns:1fr}}
+.prayer{
+  background:#FBFAF5;border:1px solid var(--hair);border-top:3px solid var(--red);
+  padding:26px 26px 22px;display:flex;flex-direction:column;gap:.7rem;
+}
+.prayer.answered{border-top-color:var(--gold)}
+.prayer .meta{display:flex;justify-content:space-between;gap:10px;font-family:"Archivo",sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--smoke)}
+.prayer .meta .tag{color:var(--gold)}
+.prayer p{font-size:.98rem;color:#3B362E;flex:1}
+.prayer .who{font-family:"EB Garamond",serif;font-style:italic;color:var(--smoke)}
+.prayers .note{margin-top:26px;font-size:.9rem;color:var(--smoke);max-width:66ch}
+
+/* ---------- letters ---------- */
+.letters{border-top:1px solid var(--hair);padding:72px 0}
+.letter{
+  display:grid;grid-template-columns:150px 1fr;gap:28px;
+  padding:30px 0;border-bottom:1px solid var(--hair);
+}
+@media(max-width:580px){.letter{grid-template-columns:1fr;gap:6px}}
+.letter:last-of-type{border-bottom:none}
+.letter time{font-family:"Archivo",sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--smoke);padding-top:.5rem}
+.letter h3{font-family:"EB Garamond",serif;font-weight:600;font-size:1.45rem;margin-bottom:.3rem}
+.letter h3 a{color:var(--ink)}
+.letter h3 a:hover{color:var(--red)}
+.letter p{font-size:.97rem;color:#3B362E;max-width:62ch}
+
+/* ---------- calendar ---------- */
+.cal{border-top:1px solid var(--hair);padding:72px 0}
+.event{display:grid;grid-template-columns:96px 1fr auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid var(--hair)}
+@media(max-width:580px){.event{grid-template-columns:72px 1fr}}
+.date{
+  border:1px solid var(--red);text-align:center;padding:10px 6px;
+  font-family:"Archivo",sans-serif;font-weight:600;text-transform:uppercase;
+}
+.date .m{display:block;font-size:.66rem;letter-spacing:.16em;color:var(--red)}
+.date .d{display:block;font-family:"EB Garamond",serif;font-weight:600;font-size:1.7rem;line-height:1.1;color:var(--ink)}
+.event h3{font-family:"EB Garamond",serif;font-weight:600;font-size:1.3rem}
+.event .where{font-size:.9rem;color:var(--smoke)}
+.event .kind{font-family:"Archivo",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.cal .subscribe{margin-top:26px}
+
+/* ---------- map ---------- */
+.map{border-top:1px solid var(--hair);padding:72px 0}
+.mapframe{
+  height:340px;border:1px solid var(--hair);
+  background:
+    radial-gradient(circle at 30% 40%, rgba(138,31,45,.14) 0 5px, transparent 6px),
+    radial-gradient(circle at 62% 30%, rgba(138,31,45,.14) 0 5px, transparent 6px),
+    radial-gradient(circle at 48% 62%, rgba(138,31,45,.14) 0 5px, transparent 6px),
+    radial-gradient(circle at 76% 70%, rgba(138,31,45,.14) 0 5px, transparent 6px),
+    linear-gradient(#EDEAE0,#E5E1D4);
+  display:grid;place-items:center;color:var(--smoke);
+  font-family:"Archivo",sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+}
+
+/* ---------- directory (locked teaser) ---------- */
+.dir{border-top:1px solid var(--hair);padding:72px 0}
+.dircard{
+  border:1px dashed var(--gold);padding:40px;max-width:720px;
+  display:flex;gap:26px;align-items:flex-start;background:#FBFAF5;
+}
+@media(max-width:580px){.dircard{flex-direction:column}}
+.dircard .glyph{font-size:1.9rem;color:var(--gold);line-height:1}
+.dircard h3{font-family:"EB Garamond",serif;font-weight:600;font-size:1.4rem;margin-bottom:.4rem}
+.dircard p{font-size:.95rem;color:#3B362E;max-width:56ch}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#CFC9BC;padding:56px 24px;margin-top:24px}
+footer .rule{width:100%;height:2px;background:var(--red);margin-bottom:32px}
+footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:baseline}
+footer .mark{font-family:"EB Garamond",serif;color:#F4F2EB;font-size:1.2rem}
+footer blockquote{font-family:"EB Garamond",serif;font-style:italic;font-size:1rem;max-width:56ch}
+footer p{font-size:.82rem;max-width:52ch}
+footer a{color:#E0DACB}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="rules" aria-hidden="true"></div>
+  <div class="wrap bar">
+    <span class="label conf">Río Texas Conference</span>
+    <h1>The Order of Elders</h1>
+    <nav aria-label="Site">
+      <a href="#letters">Letters</a>
+      <a href="#prayers">Prayer Wall</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#map">Map</a>
+      <a href="#directory" class="lock" title="Members only — coming soon">Directory</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap greet">
+    <div>
+      <p class="label" style="color:var(--red)">Grace and peace</p>
+      <h2>Watching over one another in love</h2>
+      <p>This is the shared home of the elders of the Río Texas Annual Conference — a place for the letters we write one another, the prayers we carry together, and the days we set apart to gather. Everything here is public on purpose: the covenant of the order, made visible.</p>
+      <a class="cta" href="#prayers">Submit a prayer request</a>
+    </div>
+    <blockquote class="verse">
+      “Elders have a fourfold ministry of Word, Sacrament, Order, and Service.”
+      <cite>The Book of Discipline, ¶ 340</cite>
+    </blockquote>
+  </section>
+
+  <section class="prayers" id="prayers">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="label" style="color:var(--red)">The Prayer Wall</p>
+          <h2 class="sec">Prayers of the order</h2>
+        </div>
+        <a class="more" href="#">View the full wall →</a>
+      </div>
+      <div class="wall">
+        <article class="prayer">
+          <div class="meta"><span>July 9, 2026</span></div>
+          <p>For an elder beginning a new appointment this month — for a gentle first Sunday, and for the congregation receiving a new pastor.</p>
+          <span class="who">— submitted by a member of the order</span>
+        </article>
+        <article class="prayer">
+          <div class="meta"><span>July 6, 2026</span></div>
+          <p>For those serving in the Valley through the summer heat, and for the food ministries carrying heavier loads than usual.</p>
+          <span class="who">— M. R., Corpus Christi District</span>
+        </article>
+        <article class="prayer answered">
+          <div class="meta"><span>June 24, 2026</span><span class="tag">Thanksgiving</span></div>
+          <p>Giving thanks for the eleven ordained and commissioned at annual conference, and for the hands laid upon them.</p>
+          <span class="who">— the chair of the order</span>
+        </article>
+      </div>
+      <p class="note">Requests are reviewed before posting. Please share only what is yours to share — first names or initials for others, and no medical or personal details without consent.</p>
+    </div>
+  </section>
+
+  <section class="letters" id="letters">
+    <div class="wrap">
+      <p class="label" style="color:var(--red)">From the Chair</p>
+      <h2 class="sec">Letters to the order</h2>
+      <article class="letter">
+        <time>June 2026</time>
+        <div>
+          <h3><a href="#">After Corpus Christi</a></h3>
+          <p>A word of gratitude following annual conference — on what it means that we still answer the historic questions out loud, together, and what the order might carry home from the ordination service.</p>
+        </div>
+      </article>
+      <article class="letter">
+        <time>May 2026</time>
+        <div>
+          <h3><a href="#">On appointment season</a></h3>
+          <p>For those moving and those staying: the itinerancy as a spiritual discipline, and how the order holds its members through the boxes, the goodbyes, and the first casserole.</p>
+        </div>
+      </article>
+      <article class="letter">
+        <time>April 2026</time>
+        <div>
+          <h3><a href="#">Eastertide and the long obedience</a></h3>
+          <p>Fifty days is longer than forty. A reflection on sustaining resurrection joy past the lilies, with an invitation to the fall retreat.</p>
+        </div>
+      </article>
+      <p style="margin-top:1.4rem"><a class="more" href="#">Read all letters →</a></p>
+    </div>
+  </section>
+
+  <section class="cal" id="calendar">
+    <div class="wrap">
+      <p class="label" style="color:var(--red)">Calendar</p>
+      <h2 class="sec">Gatherings of the order</h2>
+
+      <div class="event">
+        <div class="date"><span class="m">Sep</span><span class="d">14</span></div>
+        <div>
+          <span class="kind">Retreat</span>
+          <h3>Fall Retreat of the Order of Elders</h3>
+          <p class="where">Mount Wesley, Kerrville · Sep 14–16</p>
+        </div>
+      </div>
+      <div class="event">
+        <div class="date"><span class="m">Oct</span><span class="d">20</span></div>
+        <div>
+          <span class="kind">Gathering</span>
+          <h3>District lunches of the order</h3>
+          <p class="where">Hosted by district — locations to follow</p>
+        </div>
+      </div>
+      <div class="event">
+        <div class="date"><span class="m">Jun</span><span class="d">16</span></div>
+        <div>
+          <span class="kind">Conference</span>
+          <h3>Río Texas Annual Conference 2027</h3>
+          <p class="where">Clergy session · ordination · reunion of the order</p>
+        </div>
+      </div>
+
+      <p class="subscribe"><a class="more" href="#">Subscribe to the calendar (.ics) →</a></p>
+    </div>
+  </section>
+
+  <section class="map" id="map">
+    <div class="wrap">
+      <p class="label" style="color:var(--red)">The order, appointed</p>
+      <h2 class="sec">Where the elders serve</h2>
+      <div class="mapframe" role="img" aria-label="Map of appointments across the Río Texas Conference">
+        Mapbox GL · appointments across Río Texas
+      </div>
+    </div>
+  </section>
+
+  <section class="dir" id="directory">
+    <div class="wrap">
+      <div class="dircard">
+        <span class="glyph" aria-hidden="true">⚿</span>
+        <div>
+          <h3>Directory of the order — coming in version two</h3>
+          <p>Contact information, appointment details, and member pages will live behind a simple sign-in, so the order can find one another without publishing anyone’s phone number to the open web. Everything else on this site stays public.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"></div>
+    <div class="cols">
+      <span class="mark">The Order of Elders · Río Texas</span>
+      <blockquote>“To maintain all confidences inviolate.” — ¶ 340</blockquote>
+      <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>. Prayer requests are moderated before publication.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

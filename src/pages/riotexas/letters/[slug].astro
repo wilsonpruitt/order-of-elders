@@ -1,0 +1,71 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+import { formatFullDate } from "../../../lib/dates";
+
+export async function getStaticPaths() {
+  const letters = await getCollection("letters");
+  return letters.map((letter) => ({
+    params: { slug: letter.id },
+    props: { letter },
+  }));
+}
+
+const { letter } = Astro.props;
+const { Content } = await render(letter);
+---
+<Base title={`${letter.data.title} · The Order of Elders`}>
+  <header class="mast">
+    <div class="rules" aria-hidden="true"></div>
+    <div class="wrap bar">
+      <span class="label conf">Río Texas Conference</span>
+      <h1><a href="/riotexas">The Order of Elders</a></h1>
+      <nav aria-label="Site">
+        <a href="/riotexas#letters">Letters</a>
+        <a href="/riotexas#prayers">Prayer Wall</a>
+        <a href="/riotexas#calendar">Calendar</a>
+        <a href="/riotexas#map">Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="wrap letter-detail">
+      <p class="label" style="color:var(--red)">From the Chair</p>
+      <time>{formatFullDate(letter.data.date)}</time>
+      <h1>{letter.data.title}</h1>
+      <div class="body">
+        <Content />
+      </div>
+      <p class="signed">&mdash; {letter.data.author}</p>
+      <p class="back"><a href="/riotexas#letters">&larr; Back to all letters</a></p>
+    </article>
+  </main>
+
+  <Fragment slot="footer">
+    <span class="mark">The Order of Elders &middot; Río Texas</span>
+    <blockquote>"To maintain all confidences inviolate." &mdash; &para; 340</blockquote>
+    <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>.</p>
+  </Fragment>
+</Base>
+
+<style>
+  .mast { border-bottom: 1px solid var(--hair); }
+  .mast .rules { height: 10px; background: linear-gradient(var(--red) 0 3px, transparent 3px 7px, var(--red) 7px 10px); }
+  .mast .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding: 22px 0; }
+  .mast .conf { color: var(--smoke); }
+  .mast h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.5rem; letter-spacing: .01em; }
+  .mast h1 a { color: var(--ink); }
+  nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
+  nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+  nav a:hover { color: var(--red); text-decoration: none; }
+
+  .letter-detail { padding: 72px 0 96px; max-width: 680px; }
+  .letter-detail time { display: block; font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); margin: .6rem 0 .6rem; }
+  .letter-detail h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 2.4rem; margin-bottom: 1.8rem; line-height: 1.15; }
+  .letter-detail .body { font-size: 1.02rem; color: #3B362E; }
+  .letter-detail .body :global(p) { margin-bottom: 1.1rem; }
+  .letter-detail .signed { margin-top: 1.6rem; font-family: "EB Garamond", serif; font-style: italic; color: var(--smoke); }
+  .letter-detail .back { margin-top: 3rem; }
+  .letter-detail .back a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+</style>
