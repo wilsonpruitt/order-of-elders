@@ -14,7 +14,12 @@ export async function getStaticPaths() {
 const { letter } = Astro.props;
 const { Content } = await render(letter);
 ---
-<Base title={`${letter.data.title} · The Order of Elders`}>
+<Base
+  title={`${letter.data.title} · The Order of Elders`}
+  description={letter.data.excerpt}
+  image="https://riotexas.orderofelders.org/og-riotexas.png"
+  url={`https://riotexas.orderofelders.org/letters/${letter.id}`}
+>
   <header class="mast">
     <div class="rules" aria-hidden="true"></div>
     <div class="wrap bar">

@@ -7,7 +7,12 @@ const letters = (await getCollection("letters")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
-<Base title="All letters · The Order of Elders">
+<Base
+  title="All letters · The Order of Elders"
+  description="Letters to the order from the chair of the Río Texas Conference — the ordinary life of the covenant, made visible."
+  image="https://riotexas.orderofelders.org/og-riotexas.png"
+  url="https://riotexas.orderofelders.org/letters"
+>
   <header class="mast">
     <div class="rules" aria-hidden="true"></div>
     <div class="wrap bar">

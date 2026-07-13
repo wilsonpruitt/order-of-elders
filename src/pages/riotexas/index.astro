@@ -14,7 +14,12 @@ const prayers = (await getCollection("prayers"))
 const events = (await getCollection("events"))
   .sort((a, b) => a.data.start.valueOf() - b.data.start.valueOf());
 ---
-<Base title="Order of Elders · Río Texas Conference">
+<Base
+  title="Order of Elders · Río Texas Conference"
+  description="The shared home of the elders of the Río Texas Annual Conference — letters from the chair, a public prayer wall, and the calendar of the order."
+  image="https://riotexas.orderofelders.org/og-riotexas.png"
+  url="https://riotexas.orderofelders.org/"
+>
   <header class="mast">
     <div class="rules" aria-hidden="true"></div>
     <div class="wrap bar">
