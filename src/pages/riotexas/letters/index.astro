@@ -12,12 +12,12 @@ const letters = (await getCollection("letters")).sort(
     <div class="rules" aria-hidden="true"></div>
     <div class="wrap bar">
       <span class="label conf">Río Texas Conference</span>
-      <h1><a href="/riotexas">The Order of Elders</a></h1>
+      <h1><a href="/">The Order of Elders</a></h1>
       <nav aria-label="Site">
-        <a href="/riotexas#letters">Letters</a>
-        <a href="/riotexas#prayers">Prayer Wall</a>
-        <a href="/riotexas#calendar">Calendar</a>
-        <a href="/riotexas#map">Map</a>
+        <a href="/#letters">Letters</a>
+        <a href="/#prayers">Prayer Wall</a>
+        <a href="/#calendar">Calendar</a>
+        <a href="/#map">Map</a>
       </nav>
     </div>
   </header>
@@ -30,12 +30,12 @@ const letters = (await getCollection("letters")).sort(
         <article class="letter">
           <time>{formatFullDate(letter.data.date)}</time>
           <div>
-            <h3><a href={`/riotexas/letters/${letter.id}`}>{letter.data.title}</a></h3>
+            <h3><a href={`/letters/${letter.id}`}>{letter.data.title}</a></h3>
             <p>{letter.data.excerpt}</p>
           </div>
         </article>
       ))}
-      <p class="back"><a href="/riotexas#letters">&larr; Back to the conference page</a></p>
+      <p class="back"><a href="/#letters">&larr; Back to the conference page</a></p>
     </section>
   </main>
 
