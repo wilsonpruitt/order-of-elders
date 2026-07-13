@@ -65,6 +65,16 @@ const { Content } = await render(letter);
   .letter-detail h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 2.4rem; margin-bottom: 1.8rem; line-height: 1.15; }
   .letter-detail .body { font-size: 1.02rem; color: #3B362E; }
   .letter-detail .body :global(p) { margin-bottom: 1.1rem; }
+  .letter-detail .body :global(blockquote) {
+    border-left: 3px solid var(--gold); padding: 4px 0 4px 22px; margin: 0 0 2rem;
+    font-family: "EB Garamond", serif; font-style: italic; font-size: 1.1rem; color: var(--red-deep);
+  }
+  .letter-detail .body :global(blockquote p) { margin-bottom: .5rem; }
+  .letter-detail .body :global(blockquote p:last-child) {
+    margin-bottom: 0; font-style: normal;
+    font-family: "Archivo", sans-serif; font-size: .7rem; font-weight: 600;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--smoke);
+  }
   .letter-detail .signed { margin-top: 1.6rem; font-family: "EB Garamond", serif; font-style: italic; color: var(--smoke); }
   .letter-detail .back { margin-top: 3rem; }
   .letter-detail .back a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
