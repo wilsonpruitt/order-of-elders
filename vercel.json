@@ -13,7 +13,7 @@
       "continue": true
     },
     {
-      "src": "^/(.*)$",
+      "src": "^/(?!_astro/|assets/|favicon\\.svg)(.*)$",
       "dest": "/riotexas/$1",
       "has": [{ "type": "host", "value": "riotexas.orderofelders.org" }],
       "check": true
