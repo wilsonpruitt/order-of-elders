@@ -24,8 +24,6 @@ const events = (await getCollection("events"))
         <a href="#letters">Letters</a>
         <a href="#prayers">Prayer Wall</a>
         <a href="#calendar">Calendar</a>
-        <a href="#map">Map</a>
-        <a href="#directory" class="lock" title="Members only — coming soon">Directory</a>
       </nav>
     </div>
   </header>
@@ -112,27 +110,6 @@ const events = (await getCollection("events"))
       </div>
     </section>
 
-    <section class="map" id="map">
-      <div class="wrap">
-        <p class="label" style="color:var(--red)">The order, appointed</p>
-        <h2 class="sec">Where the elders serve</h2>
-        <div class="mapframe" role="img" aria-label="Map of appointments across the Río Texas Conference">
-          Map coming soon &middot; appointments across Río Texas
-        </div>
-      </div>
-    </section>
-
-    <section class="dir" id="directory">
-      <div class="wrap">
-        <div class="dircard">
-          <span class="glyph" aria-hidden="true">&#9919;</span>
-          <div>
-            <h3>Directory of the order &mdash; coming in version two</h3>
-            <p>Contact information, appointment details, and member pages will live behind a simple sign-in, so the order can find one another without publishing anyone's phone number to the open web. Everything else on this site stays public.</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <Fragment slot="footer">
@@ -157,8 +134,6 @@ const events = (await getCollection("events"))
   nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
   nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
   nav a:hover { color: var(--red); text-decoration: none; }
-  nav .lock { color: var(--smoke); }
-  nav .lock::after { content: " \26BF"; color: var(--gold); }
 
   /* ---------- greeting ---------- */
   .greet { padding: 72px 0 64px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: end; }
@@ -213,26 +188,4 @@ const events = (await getCollection("events"))
   .event .where { font-size: .9rem; color: var(--smoke); }
   .event .kind { font-family: "Archivo", sans-serif; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
   .cal .subscribe { margin-top: 26px; }
-
-  /* ---------- map ---------- */
-  .map { border-top: 1px solid var(--hair); padding: 72px 0; }
-  .mapframe {
-    height: 340px; border: 1px solid var(--hair);
-    background:
-      radial-gradient(circle at 30% 40%, rgba(138,31,45,.14) 0 5px, transparent 6px),
-      radial-gradient(circle at 62% 30%, rgba(138,31,45,.14) 0 5px, transparent 6px),
-      radial-gradient(circle at 48% 62%, rgba(138,31,45,.14) 0 5px, transparent 6px),
-      radial-gradient(circle at 76% 70%, rgba(138,31,45,.14) 0 5px, transparent 6px),
-      linear-gradient(#EDEAE0, #E5E1D4);
-    display: grid; place-items: center; color: var(--smoke);
-    font-family: "Archivo", sans-serif; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
-  }
-
-  /* ---------- directory (locked teaser) ---------- */
-  .dir { border-top: 1px solid var(--hair); padding: 72px 0; }
-  .dircard { border: 1px dashed var(--gold); padding: 40px; max-width: 720px; display: flex; gap: 26px; align-items: flex-start; background: #FBFAF5; }
-  @media (max-width: 580px) { .dircard { flex-direction: column; } }
-  .dircard .glyph { font-size: 1.9rem; color: var(--gold); line-height: 1; }
-  .dircard h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.4rem; margin-bottom: .4rem; }
-  .dircard p { font-size: .95rem; color: #3B362E; max-width: 56ch; }
 </style>

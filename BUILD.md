@@ -96,14 +96,20 @@ Keep the posted moderation policy from the mockup verbatim — it's the mechanis
 > Requests are reviewed before posting. Please share only what is yours to share — first names or
 > initials for others, and no medical or personal details without consent.
 
-## Map — placeholder in v1
+## Map — moved to v2 (2026-07-13)
 
-Keep the mockup's CSS placeholder frame (`.mapframe`). Do NOT wire Mapbox yet — that needs the
-geocoded `appointments.geojson` from the Río Texas Atlas plus a `PUBLIC_MAPBOX_TOKEN`. Defer.
+Pulled entirely from v1, alongside the directory. Not even a placeholder frame on the page now —
+cut clean rather than tease something unbuilt.
 
-When it does land: appointment data is public (it's in the Journal), so no gate. Popup shows church +
-city, **never** the elder's contact info. Personal pins (home addresses, phones) never go on the
-public map, even in v2.
+Data source when it's built: `rio-texas-journal`'s Supabase DB has exactly what's needed —
+`church(lat, lng, canonical_name, city)` joined through `appointment` to `clergy(credential_class)`.
+Filter `credential_class = 'FE'` (Full Elder, in full connection — the ¶340 scope this site is
+about) for the most recent `journal_year`. That project's own docs say the data is public,
+read-only, no auth required. Aggregate to one marker per church; the exported `appointments.geojson`
+must never carry clergy names or any personal info — church + city only, ever, even in v2.
+`rio-texas-journal/.env.local` already has a Mapbox public token, but it may be domain-restricted to
+that project's own domains — check the Mapbox account's allowed referrers (or cut a fresh public
+token) before wiring `PUBLIC_MAPBOX_TOKEN` in here.
 
 ## Build order
 
