@@ -1,0 +1,72 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { formatFullDate } from "../../../lib/dates";
+
+const letters = (await getCollection("letters")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+<Base title="All letters · The Order of Elders">
+  <header class="mast">
+    <div class="rules" aria-hidden="true"></div>
+    <div class="wrap bar">
+      <span class="label conf">Río Texas Conference</span>
+      <h1><a href="/riotexas">The Order of Elders</a></h1>
+      <nav aria-label="Site">
+        <a href="/riotexas#letters">Letters</a>
+        <a href="/riotexas#prayers">Prayer Wall</a>
+        <a href="/riotexas#calendar">Calendar</a>
+        <a href="/riotexas#map">Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap archive">
+      <p class="label" style="color:var(--red)">From the Chair</p>
+      <h2 class="sec">All letters to the order</h2>
+      {letters.map((letter) => (
+        <article class="letter">
+          <time>{formatFullDate(letter.data.date)}</time>
+          <div>
+            <h3><a href={`/riotexas/letters/${letter.id}`}>{letter.data.title}</a></h3>
+            <p>{letter.data.excerpt}</p>
+          </div>
+        </article>
+      ))}
+      <p class="back"><a href="/riotexas#letters">&larr; Back to the conference page</a></p>
+    </section>
+  </main>
+
+  <Fragment slot="footer">
+    <span class="mark">The Order of Elders &middot; Río Texas</span>
+    <blockquote>"To maintain all confidences inviolate." &mdash; &para; 340</blockquote>
+    <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>.</p>
+  </Fragment>
+</Base>
+
+<style>
+  .mast { border-bottom: 1px solid var(--hair); }
+  .mast .rules { height: 10px; background: linear-gradient(var(--red) 0 3px, transparent 3px 7px, var(--red) 7px 10px); }
+  .mast .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding: 22px 0; }
+  .mast .conf { color: var(--smoke); }
+  .mast h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.5rem; letter-spacing: .01em; }
+  .mast h1 a { color: var(--ink); }
+  nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
+  nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+  nav a:hover { color: var(--red); text-decoration: none; }
+
+  .archive { padding: 72px 0 96px; }
+  .letter { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 30px 0; border-bottom: 1px solid var(--hair); }
+  @media (max-width: 580px) { .letter { grid-template-columns: 1fr; gap: 6px; } }
+  .letter:last-of-type { border-bottom: none; }
+  .letter time { font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); padding-top: .5rem; }
+  .letter h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.45rem; margin-bottom: .3rem; }
+  .letter h3 a { color: var(--ink); }
+  .letter h3 a:hover { color: var(--red); }
+  .letter p { font-size: .97rem; color: #3B362E; max-width: 62ch; }
+
+  .archive .back { margin-top: 3rem; }
+  .archive .back a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+</style>
