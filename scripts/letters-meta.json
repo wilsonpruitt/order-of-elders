@@ -1,0 +1,522 @@
+{
+  "_README": "Editorial layer for the 2026 missives. Titles/excerpts/tags are interpretation and are reviewed by a human; the ingest script refuses to invent them. 'trailing' decides what happens to text after the sign-off: 'drop' = drafting residue or ephemeral admin, 'keep' = an intentional postscript. Tags must come from the frozen vocabulary in docs/TAGGING.md or the build fails.",
+
+  "Epiphany of the Lord (transferred)": {
+    "slug": "home-by-another-way",
+    "title": "Home by Another Way",
+    "excerpt": "On a song, the magi's detour, and a Spirit who still finds paths around what looks impenetrable.",
+    "epigraph": { "refKey": "Matt.2.12", "refDisplay": "Matthew 2:12" },
+    "tags": {
+      "theme": ["holy-spirit", "empire-and-power"],
+      "image": ["road-and-journey"],
+      "mood": ["weary", "consoling"],
+      "ministry": ["politics-and-the-pulpit", "preaching-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "Baptism of the Lord": {
+    "slug": "the-bruised-reed",
+    "title": "The Bruised Reed",
+    "excerpt": "On a servant who won't snap what is already bent — and the baptismal vows that make that work ours.",
+    "epigraph": { "refKey": "Isa.42.1", "refDisplay": "Isaiah 42:1" },
+    "tags": {
+      "theme": ["call-and-vocation", "justice", "humility"],
+      "image": ["water-and-sea", "fire-and-flame"],
+      "mood": ["exhortative", "tender"],
+      "ministry": ["call-and-ordination"]
+    },
+    "trailing": "drop"
+  },
+
+  "2nd Sunday after Epiphany": {
+    "slug": "come-and-see",
+    "title": "Come and See",
+    "excerpt": "On revelation that arrives by the drip rather than the gallon, and the slow faithfulness of abiding together.",
+    "epigraph": { "refKey": "John.1.39", "refDisplay": "John 1:39" },
+    "tags": {
+      "theme": ["discipleship", "collegiality"],
+      "image": ["road-and-journey"],
+      "mood": ["confessional", "tender"],
+      "ministry": ["self-doubt", "collegiality-and-isolation"]
+    },
+    "trailing": "drop"
+  },
+
+  "3rd Sunday after Epiphany": {
+    "slug": "the-giants-of-the-pulpit",
+    "title": "The Giants of the Pulpit",
+    "excerpt": "On preaching where giants preached, and a God who works through small, bumbling people.",
+    "epigraph": { "refKey": "Matt.4.18", "refDisplay": "Matthew 4:18" },
+    "tags": {
+      "theme": ["call-and-vocation", "humility"],
+      "image": ["water-and-sea", "daily-work"],
+      "mood": ["wry", "confessional"],
+      "ministry": ["seminary-and-formation", "preaching-and-the-pulpit", "self-doubt"]
+    },
+    "trailing": "drop"
+  },
+
+  "4th Sunday after Epiphany": {
+    "slug": "rebellions-of-mercy",
+    "title": "Rebellions of Mercy",
+    "excerpt": "On Micah's accusation against the deeply religious and deeply unjust — and why ordinary faithfulness has become an act of rebellion.",
+    "epigraph": { "refKey": "Mic.6.8", "refDisplay": "Micah 6:8" },
+    "tags": {
+      "theme": ["justice", "empire-and-power"],
+      "image": [],
+      "mood": ["indignant", "exhortative"],
+      "ministry": ["politics-and-the-pulpit", "preaching-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "5th Sunday after Epiphany": {
+    "slug": "the-only-power-that-bends",
+    "title": "The Only Power That Bends",
+    "excerpt": "On turning fifty without having learned how to do life, and choosing love when power would be so much easier.",
+    "epigraph": { "refKey": "1Cor.2.1", "refDisplay": "1 Corinthians 2:1" },
+    "tags": {
+      "theme": ["empire-and-power", "justice", "humility"],
+      "image": [],
+      "mood": ["confessional", "wry"],
+      "ministry": ["self-doubt", "politics-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "Transfiguration Sunday": {
+    "slug": "forty-days-means-a-long-time",
+    "title": "Forty Days Means a Long Time",
+    "excerpt": "On Torah as gift rather than law, and a transformation that takes a lifetime instead of a moment.",
+    "epigraph": { "refKey": "Exod.24.18", "refDisplay": "Exodus 24:18" },
+    "tags": {
+      "theme": ["transformation", "scripture-and-interpretation"],
+      "image": ["mountain-and-cloud", "fire-and-flame"],
+      "mood": ["awestruck", "exhortative"],
+      "ministry": ["preaching-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "Lent 1": {
+    "slug": "who-told-you",
+    "title": "Who Told You",
+    "excerpt": "On fig leaves, the shame that enters and stays, and a God who co-suffers rather than standing apart from our wounds.",
+    "epigraph": { "refKey": "Gen.3.7", "refDisplay": "Genesis 3:7" },
+    "tags": {
+      "theme": ["shame-and-wounds", "god-who-suffers-with-us"],
+      "image": ["garden", "wounds-and-scars"],
+      "mood": ["tender", "lament"],
+      "ministry": ["pastoral-care"]
+    },
+    "trailing": "drop"
+  },
+
+  "Lent 2": {
+    "slug": "songs-for-the-uphill-road",
+    "title": "Songs for the Uphill Road",
+    "excerpt": "On camp songs, pilgrim psalms, and who keeps us in a wilderness that has no keeper but God.",
+    "epigraph": { "refKey": "Ps.121.1", "refDisplay": "Psalm 121:1" },
+    "tags": {
+      "theme": ["presence-of-god", "hope-in-desolation"],
+      "image": ["wilderness", "mountain-and-cloud", "road-and-journey"],
+      "mood": ["tender", "lament"],
+      "ministry": ["pastoral-care", "politics-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "Lent 3": {
+    "slug": "she-is-not-one-thing",
+    "title": "She Is Not One Thing",
+    "excerpt": "On the woman at the well, the sins we assume she committed, and a gospel that refuses to flatten anyone into a single story.",
+    "epigraph": { "refKey": "John.4.17", "refDisplay": "John 4:17" },
+    "tags": {
+      "theme": ["scripture-and-interpretation", "inclusion-and-belonging", "grace"],
+      "image": ["water-and-sea"],
+      "mood": ["wry", "confessional"],
+      "ministry": ["preaching-and-the-pulpit", "women-in-ministry"]
+    },
+    "trailing": "drop"
+  },
+
+  "Lent 4": {
+    "slug": "the-brothers-nobody-names",
+    "title": "The Brothers Nobody Names",
+    "excerpt": "On Eliab, the island of misfit toys, and everyone who has been passed over and left unnamed.",
+    "epigraph": { "refKey": "1Sam.16.7", "refDisplay": "1 Samuel 16:7" },
+    "tags": {
+      "theme": ["rejection", "inclusion-and-belonging"],
+      "image": [],
+      "mood": ["tender", "wry"],
+      "ministry": ["appointment-season", "self-doubt"]
+    },
+    "trailing": "drop"
+  },
+
+  "Lent 5": {
+    "slug": "preaching-to-dry-bones",
+    "title": "Preaching to Dry Bones",
+    "excerpt": "On a drought, a river that stopped running, and the foolishness of speaking life to what is obviously dead.",
+    "epigraph": { "refKey": "Ezek.37.4", "refDisplay": "Ezekiel 37:4" },
+    "tags": {
+      "theme": ["hope-in-desolation"],
+      "image": ["bones-and-dust", "wilderness"],
+      "mood": ["lament", "consoling"],
+      "ministry": ["rural-and-small-church", "pastoral-care"]
+    },
+    "trailing": "drop"
+  },
+
+  "Palm / Passion Sunday": {
+    "slug": "what-jesus-saw-from-the-donkey",
+    "title": "What Jesus Saw from the Donkey",
+    "excerpt": "On the faces along the parade route, and a shout of Hosanna already shadowed by another cry.",
+    "epigraph": { "refKey": "Matt.21.9", "refDisplay": "Matthew 21:9" },
+    "tags": {
+      "theme": ["discipleship", "god-who-suffers-with-us"],
+      "image": ["crowd-and-parade", "road-and-journey"],
+      "mood": ["awestruck", "tender"],
+      "ministry": ["preaching-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "Easter Sunday": {
+    "slug": "dew-still-on-the-roses",
+    "title": "Dew Still on the Roses",
+    "excerpt": "On arriving at the garden exhausted, being called by name, and the gift of an Easter afternoon nap.",
+    "epigraph": { "refKey": "John.20.1", "refDisplay": "John 20:1" },
+    "tags": {
+      "theme": ["resurrection", "rest-and-weariness", "presence-of-god"],
+      "image": ["garden"],
+      "mood": ["tender", "consoling"],
+      "ministry": ["weariness-and-burnout", "sabbath-and-rest"]
+    },
+    "trailing": "drop"
+  },
+
+  "Easter 2": {
+    "slug": "what-thomas-touched",
+    "title": "What Thomas Touched",
+    "excerpt": "On whether they were scars or still open wounds — and a resurrection that transforms suffering without erasing it.",
+    "epigraph": { "refKey": "John.20.27", "refDisplay": "John 20:27" },
+    "tags": {
+      "theme": ["shame-and-wounds", "resurrection", "god-who-suffers-with-us"],
+      "image": ["wounds-and-scars", "hands-and-touch"],
+      "mood": ["tender", "consoling"],
+      "ministry": ["pastoral-care"]
+    },
+    "trailing": "drop"
+  },
+
+  "Easter 3": {
+    "slug": "three-thousand-in-a-day",
+    "title": "Three Thousand in a Day",
+    "excerpt": "On Acts as a window rather than a blueprint, and the honest question of whether you are carrying more than you were meant to carry alone.",
+    "epigraph": { "refKey": "Acts.2.41", "refDisplay": "Acts 2:41" },
+    "tags": {
+      "theme": ["collegiality", "discipleship"],
+      "image": ["table-and-meal"],
+      "mood": ["wry", "exhortative"],
+      "ministry": ["collegiality-and-isolation", "weariness-and-burnout"]
+    },
+    "trailing": "drop"
+  },
+
+  "Easter 4": {
+    "slug": "the-plastic-covered-psalm",
+    "title": "The Plastic-Covered Psalm",
+    "excerpt": "On a psalm we save for funerals the way a grandmother saves a couch under plastic — and the rest we refuse ourselves.",
+    "epigraph": { "refKey": "Ps.23.1", "refDisplay": "Psalm 23:1" },
+    "tags": {
+      "theme": ["rest-and-weariness", "grace"],
+      "image": ["shepherd-and-sheep", "home-and-hearth"],
+      "mood": ["wry", "tender"],
+      "ministry": ["preaching-and-the-pulpit", "sabbath-and-rest"]
+    },
+    "trailing": "drop",
+    "draft": true,
+    "_note": "SUPERSEDED? The Drive folder holds a second Easter 4 doc marked 'replacement' — the guest letter from Lisa Straus. Held as a draft on the assumption the guest letter went out in this slot instead. Confirm with Celia whether this Psalm 23 letter was ever sent."
+  },
+
+  "easter 4 -- replacement": {
+    "slug": "seventy-years-of-full-clergy-rights",
+    "title": "Seventy Years of Full Clergy Rights",
+    "excerpt": "A guest letter marking the 1956 decision that opened ordination to women — and a call to male colleagues to say so out loud.",
+    "author": "Lisa Straus",
+    "kind": "announcement",
+    "epigraph": { "refKey": "Gal.3.28", "refDisplay": "Galatians 3:28" },
+    "tags": {
+      "theme": ["women-in-ministry", "inclusion-and-belonging", "justice"],
+      "image": [],
+      "mood": ["exhortative"],
+      "ministry": ["women-in-ministry", "call-and-ordination"]
+    },
+    "trailing": "keep",
+    "_note": "Not by Celia — signed 'Lisa Straus, Senior Pastor Tarrytown UMC'. No liturgical-day header and no epigraph block; Galatians 3:28 is quoted inline and is recorded as the epigraph because it is the verse the letter hangs on. Points to GCSRW resources for Pentecost (May 24), which is why it likely went out a month ahead, in the Easter 4 slot."
+  },
+
+  "Easter 5": {
+    "slug": "how-can-we-know-the-way",
+    "title": "How Can We Know the Way",
+    "excerpt": "On Thomas the practical and the needy — snarky, sarcastic, and brave enough to ask for what he needed when he needed it.",
+    "epigraph": { "refKey": "John.14.5", "refDisplay": "John 14:5" },
+    "tags": {
+      "theme": ["discipleship", "presence-of-god"],
+      "image": ["road-and-journey"],
+      "mood": ["wry", "consoling"],
+      "ministry": ["self-doubt"]
+    },
+    "trailing": "drop",
+    "_note": "The Drive doc contains TWO drafts of this letter — a polished version, then an earlier rough draft pasted below the sign-off, then a stray closing paragraph. Only the polished version is imported."
+  },
+
+  "Easter 6": {
+    "slug": "functional-atheism",
+    "title": "Functional Atheism",
+    "excerpt": "On leading as though everything depends on you, and a promise that you will not be left orphaned.",
+    "epigraph": { "refKey": "John.14.18", "refDisplay": "John 14:18" },
+    "tags": {
+      "theme": ["holy-spirit", "presence-of-god", "providence-and-control"],
+      "image": ["home-and-hearth"],
+      "mood": ["confessional", "consoling"],
+      "ministry": ["weariness-and-burnout", "committees-and-administration"]
+    },
+    "trailing": "drop",
+    "_note": "CITATION FIX: the Drive doc cites the epigraph as John 14:8, but the quoted words ('I will not leave you orphaned; I am coming to you') are John 14:18. Recorded as 14:18. Worth telling Celia — it went out with the wrong verse number."
+  },
+
+  "Easter 7": {
+    "slug": "never-quite-prepared",
+    "title": "Never Quite Prepared",
+    "excerpt": "On years of having seen some things, a Spirit entirely beyond our control, and how little any of it prepares us.",
+    "epigraph": { "refKey": "Acts.1.8", "refDisplay": "Acts 1:8" },
+    "tags": {
+      "theme": ["holy-spirit", "transformation"],
+      "image": ["storm"],
+      "mood": ["awestruck", "wry"],
+      "ministry": ["pastoral-care", "committees-and-administration"]
+    },
+    "trailing": "drop"
+  },
+
+  "Pentecost": {
+    "slug": "that-pesky-holy-spirit",
+    "title": "That Pesky Holy Spirit",
+    "excerpt": "On a Spirit who is not a labor-saving device, tiny Pentecosts, and sparks that refuse to stay inside the plan.",
+    "epigraph": { "refKey": "Acts.2.9-Acts.2.11", "refDisplay": "Acts 2:9-11" },
+    "tags": {
+      "theme": ["holy-spirit", "kingdom-of-god", "providence-and-control"],
+      "image": ["fire-and-flame"],
+      "mood": ["wry", "playful"],
+      "ministry": ["committees-and-administration"]
+    },
+    "trailing": "drop"
+  },
+
+  "Trinity sunday": {
+    "slug": "not-fully-myself-without-you",
+    "title": "Not Fully Myself Without You",
+    "excerpt": "On skipping the doctrinal sermon and asking instead what it means that none of us carries the image of God alone.",
+    "epigraph": { "refKey": "Gen.1.26", "refDisplay": "Genesis 1:26" },
+    "tags": {
+      "theme": ["collegiality", "inclusion-and-belonging"],
+      "image": [],
+      "mood": ["wry", "tender"],
+      "ministry": ["preaching-and-the-pulpit", "collegiality-and-isolation"]
+    },
+    "trailing": "drop"
+  },
+
+  "2nd post pentecost": {
+    "slug": "the-company-jesus-keeps",
+    "title": "The Company Jesus Keeps",
+    "excerpt": "On sin and sickness as forms of separation, and a physician determined to cross every barrier we build.",
+    "epigraph": { "refKey": "Matt.9.12", "refDisplay": "Matthew 9:12" },
+    "tags": {
+      "theme": ["inclusion-and-belonging", "mercy", "justice"],
+      "image": ["table-and-meal"],
+      "mood": ["exhortative", "indignant"],
+      "ministry": ["politics-and-the-pulpit", "pastoral-care"]
+    },
+    "trailing": "drop"
+  },
+
+  "3  post Pentecost": {
+    "slug": "take-no-bag-for-the-journey",
+    "title": "Take No Bag for the Journey",
+    "excerpt": "On evangelism with empty hands, elaborate travel plans, and a Holy Spirit with a well-documented sense of humor.",
+    "epigraph": { "refKey": "Matt.10.9-Matt.10.10", "refDisplay": "Matthew 10:9-10" },
+    "tags": {
+      "theme": ["evangelism", "providence-and-control", "humility"],
+      "image": ["road-and-journey"],
+      "mood": ["wry", "playful"],
+      "ministry": ["evangelism-and-outreach"]
+    },
+    "trailing": "keep",
+    "_note": "The postscript below the sign-off is INTENTIONAL — she wrote the letter before her Pittsburgh trip and added the (disastrous) outcome afterward. It is the punchline. Do not cut it."
+  },
+
+  "8th post pentecost": {
+    "slug": "surely-the-lord-is-in-this-place",
+    "title": "Surely the Lord Is in This Place",
+    "excerpt": "On Jacob's rock pillow, a parishioner in the emergency room, and why we are still surprised when God shows up.",
+    "epigraph": { "refKey": "Gen.28.16", "refDisplay": "Genesis 28:16" },
+    "tags": {
+      "theme": ["presence-of-god", "grace"],
+      "image": ["ladder-and-angels", "wilderness"],
+      "mood": ["awestruck", "consoling"],
+      "ministry": ["pastoral-care"]
+    },
+    "trailing": "keep",
+    "_note": "The closing paragraph on Jacob as an unreliable narrator sits below the sign-off but is addressed to readers and trails into the next letters on Jacob. Kept as a postscript."
+  },
+
+  "9th post pentecost": {
+    "slug": "a-kingdom-you-cannot-own",
+    "title": "A Kingdom You Cannot Own",
+    "excerpt": "On buried treasure, invasive weeds, and a kingdom that arrives whether or not we are ready for it.",
+    "epigraph": { "refKey": "Matt.13.44", "refDisplay": "Matthew 13:44" },
+    "tags": {
+      "theme": ["kingdom-of-god", "scripture-and-interpretation"],
+      "image": ["treasure", "soil-and-seed", "garden"],
+      "mood": ["playful", "wry"],
+      "ministry": ["preaching-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "10th post pentecost": {
+    "slug": "say-your-name",
+    "title": "Say Your Name",
+    "excerpt": "On a grabby, conniving scoundrel forced to say his own name out loud — and a God who still will not let go.",
+    "epigraph": { "refKey": "Gen.32.27", "refDisplay": "Genesis 32:27" },
+    "tags": {
+      "theme": ["shame-and-wounds", "transformation", "grace"],
+      "image": ["wrestling", "water-and-sea"],
+      "mood": ["indignant", "tender"],
+      "ministry": ["self-doubt"]
+    },
+    "trailing": "drop"
+  },
+
+  "11th post pentecost": {
+    "slug": "ego-eimi",
+    "title": "Ego Eimi",
+    "excerpt": "On translating when nobody asked you to, and finding 'I am' in the middle of the storm.",
+    "epigraph": { "refKey": "Matt.14.27", "refDisplay": "Matthew 14:27" },
+    "tags": {
+      "theme": ["presence-of-god", "scripture-and-interpretation"],
+      "image": ["storm", "water-and-sea"],
+      "mood": ["weary", "consoling"],
+      "ministry": ["preaching-and-the-pulpit", "weariness-and-burnout"]
+    },
+    "trailing": "drop"
+  },
+
+  "12th Post pentecost": {
+    "slug": "what-came-out-of-his-mouth",
+    "title": "What Came Out of His Mouth",
+    "excerpt": "On the hardest thing to say about this text — that our savior insults a foreigner, and is redeemed by her faith.",
+    "epigraph": { "refKey": "Matt.15.26", "refDisplay": "Matthew 15:26" },
+    "tags": {
+      "theme": ["mercy", "inclusion-and-belonging", "scripture-and-interpretation"],
+      "image": ["table-and-meal"],
+      "mood": ["indignant", "confessional"],
+      "ministry": ["preaching-and-the-pulpit", "politics-and-the-pulpit"]
+    },
+    "trailing": "drop"
+  },
+
+  "13th Post Pentecost": {
+    "slug": "shiphrah-and-puah",
+    "title": "Shiphrah and Puah",
+    "excerpt": "On midwives who turned the oppressor's own contempt into a tool of resistance — and whether we are willing to learn how.",
+    "epigraph": { "refKey": "Exod.1.19", "refDisplay": "Exodus 1:19" },
+    "tags": {
+      "theme": ["justice", "empire-and-power", "women-in-ministry"],
+      "image": [],
+      "mood": ["indignant", "lament"],
+      "ministry": ["politics-and-the-pulpit", "women-in-ministry"]
+    },
+    "trailing": "drop"
+  },
+
+  "14th post pentecost": {
+    "slug": "turning-aside",
+    "title": "Turning Aside",
+    "excerpt": "On Moses and the sheep, the numbing routine of the work, and how many burning bushes we walk straight past.",
+    "epigraph": { "refKey": "Exod.3.3", "refDisplay": "Exodus 3:3" },
+    "tags": {
+      "theme": ["call-and-vocation", "presence-of-god"],
+      "image": ["fire-and-flame", "shepherd-and-sheep", "daily-work"],
+      "mood": ["tender", "awestruck"],
+      "ministry": ["call-and-ordination", "weariness-and-burnout"]
+    },
+    "trailing": "drop"
+  },
+
+  "15th Post Pentecost": {
+    "slug": "where-two-or-three-are-gathered",
+    "title": "Where Two or Three Are Gathered",
+    "excerpt": "On a verse we quote to excuse a thin crowd, and the church conflict it was actually about.",
+    "epigraph": { "refKey": "Matt.18.20", "refDisplay": "Matthew 18:20" },
+    "tags": {
+      "theme": ["conflict-and-reconciliation", "presence-of-god"],
+      "image": ["empty-room"],
+      "mood": ["wry", "lament"],
+      "ministry": ["church-conflict"]
+    },
+    "trailing": "drop"
+  },
+
+  "4 post pentecost": {
+    "slug": "acknowledging-jesus-in-strangers",
+    "existing": true,
+    "epigraph": { "refKey": "Matt.10.32-Matt.10.33", "refDisplay": "Matthew 10:32-33" },
+    "tags": {
+      "theme": ["inclusion-and-belonging", "evangelism", "mercy"],
+      "image": ["daily-work"],
+      "mood": ["tender", "playful"],
+      "ministry": ["evangelism-and-outreach", "pastoral-care"]
+    }
+  },
+
+  "5th post pentecost": {
+    "slug": "the-wounds-that-remain",
+    "existing": true,
+    "epigraph": { "refKey": "Gen.22.2", "refDisplay": "Genesis 22:2" },
+    "tags": {
+      "theme": ["shame-and-wounds", "god-who-suffers-with-us", "scripture-and-interpretation"],
+      "image": ["wounds-and-scars", "mountain-and-cloud"],
+      "mood": ["lament", "confessional"],
+      "ministry": ["preaching-and-the-pulpit", "pastoral-care"]
+    }
+  },
+
+  "6th post pentecost": {
+    "slug": "the-church-doesnt-need-super-pastors",
+    "existing": true,
+    "epigraph": { "refKey": "Matt.11.18-Matt.11.19", "refDisplay": "Matthew 11:18-19" },
+    "tags": {
+      "theme": ["rest-and-weariness", "humility", "collegiality"],
+      "image": [],
+      "mood": ["confessional", "consoling"],
+      "ministry": ["weariness-and-burnout", "self-doubt"]
+    }
+  },
+
+  "7 post pentecost": {
+    "slug": "who-moves-the-rocks",
+    "existing": true,
+    "epigraph": { "refKey": "Matt.13.3", "refDisplay": "Matthew 13:3" },
+    "tags": {
+      "theme": ["grace", "transformation"],
+      "image": ["soil-and-seed", "garden"],
+      "mood": ["wry", "tender"],
+      "ministry": ["pastoral-care"]
+    }
+  }
+}

@@ -1,0 +1,1656 @@
+[
+  {
+    "drive_doc": "Epiphany of the Lord (transferred)",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/06-epiphany-of-the-lord-transferred.md",
+    "occasion": "Epiphany of the Lord",
+    "occasionId": "epiphany-of-the-lord-a",
+    "season": "Epiphany",
+    "sunday": "2026-01-04",
+    "date": "2025-12-31",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Isa.60.1-Isa.60.6",
+        "refDisplay": "Isaiah 60:1-6"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.72.1-Ps.72.7",
+        "refDisplay": "Psalm 72:1-7, 10-14",
+        "refKeys": [
+          "Ps.72.1-Ps.72.7",
+          "Ps.72.10-Ps.72.14"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "Eph.3.1-Eph.3.12",
+        "refDisplay": "Ephesians 3:1-12"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.2.1-Matt.2.12",
+        "refDisplay": "Matthew 2:1-12"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Baptism of the Lord",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/01-baptism-of-the-lord.md",
+    "occasion": "Baptism of the Lord",
+    "occasionId": "baptism-of-the-lord-a",
+    "season": "Epiphany",
+    "sunday": "2026-01-11",
+    "date": "2026-01-07",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Isa.42.1-Isa.42.9",
+        "refDisplay": "Isaiah 42:1-9"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.29",
+        "refDisplay": "Psalm 29"
+      },
+      {
+        "role": "second",
+        "refKey": "Acts.10.34-Acts.10.43",
+        "refDisplay": "Acts 10:34-43"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.3.13-Matt.3.17",
+        "refDisplay": "Matthew 3:13-17"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "2nd Sunday after Epiphany",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/02-2nd-sunday-after-epiphany.md",
+    "occasion": "Second Sunday after the Epiphany",
+    "occasionId": "second-sunday-after-the-epiphany-a",
+    "season": "Epiphany",
+    "sunday": "2026-01-18",
+    "date": "2026-01-14",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Isa.49.1-Isa.49.7",
+        "refDisplay": "Isaiah 49:1-7"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.40.1-Ps.40.11",
+        "refDisplay": "Psalm 40:1-11"
+      },
+      {
+        "role": "second",
+        "refKey": "1Cor.1.1-1Cor.1.9",
+        "refDisplay": "1 Corinthians 1:1-9"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.1.29-John.1.42",
+        "refDisplay": "John 1:29-42"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "3rd Sunday after Epiphany",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/03-3rd-sunday-after-epiphany.md",
+    "occasion": "Third Sunday after the Epiphany",
+    "occasionId": "third-sunday-after-the-epiphany-a",
+    "season": "Epiphany",
+    "sunday": "2026-01-25",
+    "date": "2026-01-21",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Isa.9.1-Isa.9.4",
+        "refDisplay": "Isaiah 9:1-4"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.27.1",
+        "refDisplay": "Psalm 27:1, 4-9",
+        "refKeys": [
+          "Ps.27.1",
+          "Ps.27.4-Ps.27.9"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "1Cor.1.10-1Cor.1.18",
+        "refDisplay": "1 Corinthians 1:10-18"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.4.12-Matt.4.23",
+        "refDisplay": "Matthew 4:12-23"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "4th Sunday after Epiphany",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/04-4th-sunday-after-epiphany.md",
+    "occasion": "Fourth Sunday after the Epiphany",
+    "occasionId": "fourth-sunday-after-the-epiphany-a",
+    "season": "Epiphany",
+    "sunday": "2026-02-01",
+    "date": "2026-01-28",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Mic.6.1-Mic.6.8",
+        "refDisplay": "Micah 6:1-8"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.15",
+        "refDisplay": "Psalm 15"
+      },
+      {
+        "role": "second",
+        "refKey": "1Cor.1.18-1Cor.1.31",
+        "refDisplay": "1 Corinthians 1:18-31"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.5.1-Matt.5.12",
+        "refDisplay": "Matthew 5:1-12"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "5th Sunday after Epiphany",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/05-5th-sunday-after-epiphany.md",
+    "occasion": "Fifth Sunday after the Epiphany",
+    "occasionId": "fifth-sunday-after-the-epiphany-a",
+    "season": "Epiphany",
+    "sunday": "2026-02-08",
+    "date": "2026-02-04",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Isa.58.1-Isa.58.9",
+        "refDisplay": "Isaiah 58:1-9a (9b-12)",
+        "refKeys": [
+          "Isa.58.1-Isa.58.9",
+          "Isa.58.9-Isa.58.12"
+        ],
+        "multi": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.112.1-Ps.112.9",
+        "refDisplay": "Psalm 112:1-9 (10)",
+        "refKeys": [
+          "Ps.112.1-Ps.112.9",
+          "Ps.112.10"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "1Cor.2.1-1Cor.2.12",
+        "refDisplay": "1 Corinthians 2:1-12 (13-16)",
+        "refKeys": [
+          "1Cor.2.1-1Cor.2.12",
+          "1Cor.2.13-1Cor.2.16"
+        ],
+        "multi": true
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.5.13-Matt.5.20",
+        "refDisplay": "Matthew 5:13-20"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Transfiguration Sunday",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/07-transfiguration-sunday.md",
+    "occasion": "Transfiguration Sunday",
+    "occasionId": "transfiguration-sunday-a",
+    "season": "Epiphany",
+    "sunday": "2026-02-15",
+    "date": "2026-02-11",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Exod.24.12-Exod.24.18",
+        "refDisplay": "Exodus 24:12-18"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.2",
+        "refDisplay": "Psalm 2"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.99",
+        "refDisplay": "Psalm 99",
+        "alt": true
+      },
+      {
+        "role": "second",
+        "refKey": "2Pet.1.16-2Pet.1.21",
+        "refDisplay": "2 Peter 1:16-21"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.17.1-Matt.17.9",
+        "refDisplay": "Matthew 17:1-9"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Lent 1",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/08-lent-1.md",
+    "occasion": "First Sunday in Lent",
+    "occasionId": "first-sunday-in-lent-a",
+    "season": "Lent",
+    "sunday": "2026-02-22",
+    "date": "2026-02-18",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.2.15-Gen.2.17",
+        "refDisplay": "Genesis 2:15-17; 3:1-7",
+        "refKeys": [
+          "Gen.2.15-Gen.2.17",
+          "Gen.3.1-Gen.3.7"
+        ],
+        "multi": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.32",
+        "refDisplay": "Psalm 32"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.5.12-Rom.5.19",
+        "refDisplay": "Romans 5:12-19"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.4.1-Matt.4.11",
+        "refDisplay": "Matthew 4:1-11"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Lent 2",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/09-lent-2.md",
+    "occasion": "Second Sunday in Lent",
+    "occasionId": "second-sunday-in-lent-a",
+    "season": "Lent",
+    "sunday": "2026-03-01",
+    "date": "2026-02-25",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.12.1-Gen.12.4",
+        "refDisplay": "Genesis 12:1-4a"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.121",
+        "refDisplay": "Psalm 121"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.4.1-Rom.4.5",
+        "refDisplay": "Romans 4:1-5, 13-17",
+        "refKeys": [
+          "Rom.4.1-Rom.4.5",
+          "Rom.4.13-Rom.4.17"
+        ],
+        "multi": true
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.3.1-John.3.17",
+        "refDisplay": "John 3:1-17"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.17.1-Matt.17.9",
+        "refDisplay": "Matthew 17:1-9",
+        "alt": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Lent 3",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/10-lent-3.md",
+    "occasion": "Third Sunday in Lent",
+    "occasionId": "third-sunday-in-lent-a",
+    "season": "Lent",
+    "sunday": "2026-03-08",
+    "date": "2026-03-04",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Exod.17.1-Exod.17.7",
+        "refDisplay": "Exodus 17:1-7"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.95",
+        "refDisplay": "Psalm 95"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.5.1-Rom.5.11",
+        "refDisplay": "Romans 5:1-11"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.4.5-John.4.42",
+        "refDisplay": "John 4:5-42"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Lent 4",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/11-lent-4.md",
+    "occasion": "Fourth Sunday in Lent",
+    "occasionId": "fourth-sunday-in-lent-a",
+    "season": "Lent",
+    "sunday": "2026-03-15",
+    "date": "2026-03-11",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "1Sam.16.1-1Sam.16.13",
+        "refDisplay": "1 Samuel 16:1-13"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.23",
+        "refDisplay": "Psalm 23"
+      },
+      {
+        "role": "second",
+        "refKey": "Eph.5.8-Eph.5.14",
+        "refDisplay": "Ephesians 5:8-14"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.9.1-John.9.41",
+        "refDisplay": "John 9:1-41"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Lent 5",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/12-lent-5.md",
+    "occasion": "Fifth Sunday in Lent",
+    "occasionId": "fifth-sunday-in-lent-a",
+    "season": "Lent",
+    "sunday": "2026-03-22",
+    "date": "2026-03-18",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Ezek.37.1-Ezek.37.14",
+        "refDisplay": "Ezekiel 37:1-14"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.130",
+        "refDisplay": "Psalm 130"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.8.6-Rom.8.11",
+        "refDisplay": "Romans 8:6-11"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.11.1-John.11.45",
+        "refDisplay": "John 11:1-45"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Palm / Passion Sunday",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/13-palm-passion-sunday.md",
+    "occasion": "Liturgy of the Passion",
+    "occasionId": "liturgy-of-the-passion-a",
+    "season": "Holy Week",
+    "sunday": "2026-03-29",
+    "date": "2026-03-25",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Isa.50.4-Isa.50.9",
+        "refDisplay": "Isaiah 50:4-9a"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.31.9-Ps.31.16",
+        "refDisplay": "Psalm 31:9-16"
+      },
+      {
+        "role": "second",
+        "refKey": "Phil.2.5-Phil.2.11",
+        "refDisplay": "Philippians 2:5-11"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.26.14-Matt.27.66",
+        "refDisplay": "Matthew 26:14-27:66"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.27.11-Matt.27.54",
+        "refDisplay": "Matthew 27:11-54",
+        "alt": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter Sunday",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/14-easter-sunday.md",
+    "occasion": "Resurrection of the Lord",
+    "occasionId": "resurrection-of-the-lord-a",
+    "season": "Easter",
+    "sunday": "2026-04-05",
+    "date": "2026-04-01",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.10.34-Acts.10.43",
+        "refDisplay": "Acts 10:34-43"
+      },
+      {
+        "role": "first",
+        "refKey": "Jer.31.1-Jer.31.6",
+        "refDisplay": "Jeremiah 31:1-6",
+        "alt": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.118.1-Ps.118.2",
+        "refDisplay": "Psalm 118:1-2, 14-24",
+        "refKeys": [
+          "Ps.118.1-Ps.118.2",
+          "Ps.118.14-Ps.118.24"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "Col.3.1-Col.3.4",
+        "refDisplay": "Colossians 3:1-4"
+      },
+      {
+        "role": "second",
+        "refKey": "Acts.10.34-Acts.10.43",
+        "refDisplay": "Acts 10:34-43",
+        "alt": true
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.20.1-John.20.18",
+        "refDisplay": "John 20:1-18"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.28.1-Matt.28.10",
+        "refDisplay": "Matthew 28:1-10",
+        "alt": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter 2",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/15-easter-2.md",
+    "occasion": "Second Sunday of Easter",
+    "occasionId": "second-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-04-12",
+    "date": "2026-04-08",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.2.14",
+        "refDisplay": "Acts 2:14a, 22-32",
+        "refKeys": [
+          "Acts.2.14",
+          "Acts.2.22-Acts.2.32"
+        ],
+        "multi": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.16",
+        "refDisplay": "Psalm 16"
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.1.3-1Pet.1.9",
+        "refDisplay": "1 Peter 1:3-9"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.20.19-John.20.31",
+        "refDisplay": "John 20:19-31"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter 3",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/16-easter-3.md",
+    "occasion": "Third Sunday of Easter",
+    "occasionId": "third-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-04-19",
+    "date": "2026-04-15",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.2.14",
+        "refDisplay": "Acts 2:14a, 36-41",
+        "refKeys": [
+          "Acts.2.14",
+          "Acts.2.36-Acts.2.41"
+        ],
+        "multi": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.116.1-Ps.116.4",
+        "refDisplay": "Psalm 116:1-4, 12-19",
+        "refKeys": [
+          "Ps.116.1-Ps.116.4",
+          "Ps.116.12-Ps.116.19"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.1.17-1Pet.1.23",
+        "refDisplay": "1 Peter 1:17-23"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Luke.24.13-Luke.24.35",
+        "refDisplay": "Luke 24:13-35"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter 4",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/17-easter-4.md",
+    "occasion": "Fourth Sunday of Easter",
+    "occasionId": "fourth-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-04-26",
+    "date": "2026-04-22",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.2.42-Acts.2.47",
+        "refDisplay": "Acts 2:42-47"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.23",
+        "refDisplay": "Psalm 23"
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.2.19-1Pet.2.25",
+        "refDisplay": "1 Peter 2:19-25"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.10.1-John.10.10",
+        "refDisplay": "John 10:1-10"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "easter 4 -- replacement",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/18-easter-4-replacement.md",
+    "occasion": "Fourth Sunday of Easter",
+    "occasionId": "fourth-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-04-26",
+    "date": "2026-04-22",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.2.42-Acts.2.47",
+        "refDisplay": "Acts 2:42-47"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.23",
+        "refDisplay": "Psalm 23"
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.2.19-1Pet.2.25",
+        "refDisplay": "1 Peter 2:19-25"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.10.1-John.10.10",
+        "refDisplay": "John 10:1-10"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter 5",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/19-easter-5.md",
+    "occasion": "Fifth Sunday of Easter",
+    "occasionId": "fifth-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-05-03",
+    "date": "2026-04-29",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.7.55-Acts.7.60",
+        "refDisplay": "Acts 7:55-60"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.31.1-Ps.31.5",
+        "refDisplay": "Psalm 31:1-5, 15-16",
+        "refKeys": [
+          "Ps.31.1-Ps.31.5",
+          "Ps.31.15-Ps.31.16"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.2.2-1Pet.2.10",
+        "refDisplay": "1 Peter 2:2-10"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.14.1-John.14.14",
+        "refDisplay": "John 14:1-14"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter 6",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/20-easter-6.md",
+    "occasion": "Sixth Sunday of Easter",
+    "occasionId": "sixth-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-05-10",
+    "date": "2026-05-06",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.17.22-Acts.17.31",
+        "refDisplay": "Acts 17:22-31"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.66.8-Ps.66.20",
+        "refDisplay": "Psalm 66:8-20"
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.3.13-1Pet.3.22",
+        "refDisplay": "1 Peter 3:13-22"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.14.15-John.14.21",
+        "refDisplay": "John 14:15-21"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Easter 7",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/21-easter-7.md",
+    "occasion": "Seventh Sunday of Easter",
+    "occasionId": "seventh-sunday-of-easter-a",
+    "season": "Easter",
+    "sunday": "2026-05-17",
+    "date": "2026-05-13",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.1.6-Acts.1.14",
+        "refDisplay": "Acts 1:6-14"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.68.1-Ps.68.10",
+        "refDisplay": "Psalm 68:1-10, 32-35",
+        "refKeys": [
+          "Ps.68.1-Ps.68.10",
+          "Ps.68.32-Ps.68.35"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "1Pet.4.12-1Pet.4.14",
+        "refDisplay": "1 Peter 4:12-14; 5:6-11",
+        "refKeys": [
+          "1Pet.4.12-1Pet.4.14",
+          "1Pet.5.6-1Pet.5.11"
+        ],
+        "multi": true
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.17.1-John.17.11",
+        "refDisplay": "John 17:1-11"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/22-pentecost.md",
+    "occasion": "Day of Pentecost",
+    "occasionId": "day-of-pentecost-a",
+    "season": "Pentecost",
+    "sunday": "2026-05-24",
+    "date": "2026-05-20",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Acts.2.1-Acts.2.21",
+        "refDisplay": "Acts 2:1-21"
+      },
+      {
+        "role": "first",
+        "refKey": "Num.11.24-Num.11.30",
+        "refDisplay": "Numbers 11:24-30",
+        "alt": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.104.24-Ps.104.34",
+        "refDisplay": "Psalm 104:24-34, 35b",
+        "refKeys": [
+          "Ps.104.24-Ps.104.34",
+          "Ps.104.35"
+        ],
+        "multi": true
+      },
+      {
+        "role": "second",
+        "refKey": "1Cor.12.3-1Cor.12.13",
+        "refDisplay": "1 Corinthians 12:3b-13"
+      },
+      {
+        "role": "second",
+        "refKey": "Acts.2.1-Acts.2.21",
+        "refDisplay": "Acts 2:1-21",
+        "alt": true
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.20.19-John.20.23",
+        "refDisplay": "John 20:19-23"
+      },
+      {
+        "role": "gospel",
+        "refKey": "John.7.37-John.7.39",
+        "refDisplay": "John 7:37-39",
+        "alt": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "Trinity sunday",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/23-trinity-sunday.md",
+    "occasion": "Trinity Sunday",
+    "occasionId": "trinity-sunday-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-05-31",
+    "date": "2026-05-27",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.1.1-Gen.2.4",
+        "refDisplay": "Genesis 1:1-2:4a"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.8",
+        "refDisplay": "Psalm 8"
+      },
+      {
+        "role": "second",
+        "refKey": "2Cor.13.11-2Cor.13.13",
+        "refDisplay": "2 Corinthians 13:11-13"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.28.16-Matt.28.20",
+        "refDisplay": "Matthew 28:16-20"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "2nd post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/24-2nd-post-pentecost.md",
+    "occasion": "Proper 5 (10)",
+    "occasionId": "proper-5-10-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-06-07",
+    "date": "2026-06-03",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.12.1-Gen.12.9",
+        "refDisplay": "Genesis 12:1-9",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.33.1-Ps.33.12",
+        "refDisplay": "Psalm 33:1-12",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Hos.5.15-Hos.6.6",
+        "refDisplay": "Hosea 5:15-6:6",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.50.7-Ps.50.15",
+        "refDisplay": "Psalm 50:7-15",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.4.13-Rom.4.25",
+        "refDisplay": "Romans 4:13-25"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.9.9-Matt.9.13",
+        "refDisplay": "Matthew 9:9-13, 18-26",
+        "refKeys": [
+          "Matt.9.9-Matt.9.13",
+          "Matt.9.18-Matt.9.26"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "3  post Pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/25-3-post-pentecost.md",
+    "occasion": "Proper 6 (11)",
+    "occasionId": "proper-6-11-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-06-14",
+    "date": "2026-06-10",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.18.1-Gen.18.15",
+        "refDisplay": "Genesis 18:1-15, (21:1-7)",
+        "refKeys": [
+          "Gen.18.1-Gen.18.15",
+          "Gen.21.1-Gen.21.7"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.116.1-Ps.116.2",
+        "refDisplay": "Psalm 116:1-2, 12-19",
+        "refKeys": [
+          "Ps.116.1-Ps.116.2",
+          "Ps.116.12-Ps.116.19"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Exod.19.2-Exod.19.8",
+        "refDisplay": "Exodus 19:2-8a",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.100",
+        "refDisplay": "Psalm 100",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.5.1-Rom.5.8",
+        "refDisplay": "Romans 5:1-8"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.9.35-Matt.10.8",
+        "refDisplay": "Matthew 9:35-10:8, (9-23)",
+        "refKeys": [
+          "Matt.9.35-Matt.10.8",
+          "Matt.10.9-Matt.10.23"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "4 post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/26-4-post-pentecost.md",
+    "occasion": "Proper 7 (12)",
+    "occasionId": "proper-7-12-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-06-21",
+    "date": "2026-06-17",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.21.8-Gen.21.21",
+        "refDisplay": "Genesis 21:8-21",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.86.1-Ps.86.10",
+        "refDisplay": "Psalm 86:1-10, 16-17",
+        "refKeys": [
+          "Ps.86.1-Ps.86.10",
+          "Ps.86.16-Ps.86.17"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Jer.20.7-Jer.20.13",
+        "refDisplay": "Jeremiah 20:7-13",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.69.7-Ps.69.10",
+        "refDisplay": "Psalm 69:7-10, (11-15), 16-18",
+        "refKeys": [
+          "Ps.69.7-Ps.69.10",
+          "Ps.69.11-Ps.69.15",
+          "Ps.69.16-Ps.69.18"
+        ],
+        "multi": true,
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.6.1-Rom.6.11",
+        "refDisplay": "Romans 6:1b-11"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.10.24-Matt.10.39",
+        "refDisplay": "Matthew 10:24-39"
+      }
+    ],
+    "existing": "acknowledging-jesus-in-strangers"
+  },
+  {
+    "drive_doc": "5th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/27-5th-post-pentecost.md",
+    "occasion": "Proper 8 (13)",
+    "occasionId": "proper-8-13-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-06-28",
+    "date": "2026-06-24",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.22.1-Gen.22.14",
+        "refDisplay": "Genesis 22:1-14",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.13",
+        "refDisplay": "Psalm 13",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Jer.28.5-Jer.28.9",
+        "refDisplay": "Jeremiah 28:5-9",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.89.1-Ps.89.4",
+        "refDisplay": "Psalm 89:1-4, 15-18",
+        "refKeys": [
+          "Ps.89.1-Ps.89.4",
+          "Ps.89.15-Ps.89.18"
+        ],
+        "multi": true,
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.6.12-Rom.6.23",
+        "refDisplay": "Romans 6:12-23"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.10.40-Matt.10.42",
+        "refDisplay": "Matthew 10:40-42"
+      }
+    ],
+    "existing": "the-wounds-that-remain"
+  },
+  {
+    "drive_doc": "6th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/28-6th-post-pentecost.md",
+    "occasion": "Proper 9 (14)",
+    "occasionId": "proper-9-14-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-07-05",
+    "date": "2026-07-01",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.24.34-Gen.24.38",
+        "refDisplay": "Genesis 24:34-38, 42-49, 58-67",
+        "refKeys": [
+          "Gen.24.34-Gen.24.38",
+          "Gen.24.42-Gen.24.49",
+          "Gen.24.58-Gen.24.67"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.45.10-Ps.45.17",
+        "refDisplay": "Psalm 45:10-17",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Song.2.8-Song.2.13",
+        "refDisplay": "Song of Solomon 2:8-13",
+        "track": "semicontinuous",
+        "alt": true
+      },
+      {
+        "role": "first",
+        "refKey": "Zech.9.9-Zech.9.12",
+        "refDisplay": "Zechariah 9:9-12",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.145.8-Ps.145.14",
+        "refDisplay": "Psalm 145:8-14",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.7.15-Rom.7.25",
+        "refDisplay": "Romans 7:15-25a"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.11.16-Matt.11.19",
+        "refDisplay": "Matthew 11:16-19, 25-30",
+        "refKeys": [
+          "Matt.11.16-Matt.11.19",
+          "Matt.11.25-Matt.11.30"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": "the-church-doesnt-need-super-pastors"
+  },
+  {
+    "drive_doc": "7 post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/29-7-post-pentecost.md",
+    "occasion": "Proper 10 (15)",
+    "occasionId": "proper-10-15-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-07-12",
+    "date": "2026-07-08",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.25.19-Gen.25.34",
+        "refDisplay": "Genesis 25:19-34",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.119.105-Ps.119.112",
+        "refDisplay": "Psalm 119:105-112",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Isa.55.10-Isa.55.13",
+        "refDisplay": "Isaiah 55:10-13",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.65.9-Ps.65.13",
+        "refDisplay": "Psalm 65:(1-8), 9-13",
+        "refKeys": [
+          "Ps.65.9-Ps.65.13",
+          "Ps.65.1-Ps.65.8"
+        ],
+        "multi": true,
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.8.1-Rom.8.11",
+        "refDisplay": "Romans 8:1-11"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.13.1-Matt.13.9",
+        "refDisplay": "Matthew 13:1-9, 18-23",
+        "refKeys": [
+          "Matt.13.1-Matt.13.9",
+          "Matt.13.18-Matt.13.23"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": "who-moves-the-rocks"
+  },
+  {
+    "drive_doc": "8th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/30-8th-post-pentecost.md",
+    "occasion": "Proper 11 (16)",
+    "occasionId": "proper-11-16-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-07-19",
+    "date": "2026-07-15",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.28.10-Gen.28.19",
+        "refDisplay": "Genesis 28:10-19a",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.139.1-Ps.139.12",
+        "refDisplay": "Psalm 139:1-12, 23-24",
+        "refKeys": [
+          "Ps.139.1-Ps.139.12",
+          "Ps.139.23-Ps.139.24"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Wis.12.13",
+        "refDisplay": "Wisdom of Solomon 12:13, 16-19",
+        "refKeys": [
+          "Wis.12.13",
+          "Wis.12.16-Wis.12.19"
+        ],
+        "multi": true,
+        "track": "complementary"
+      },
+      {
+        "role": "first",
+        "refKey": "Isa.44.6-Isa.44.8",
+        "refDisplay": "Isaiah 44:6-8",
+        "track": "complementary",
+        "alt": true
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.86.11-Ps.86.17",
+        "refDisplay": "Psalm 86:11-17",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.8.12-Rom.8.25",
+        "refDisplay": "Romans 8:12-25"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.13.24-Matt.13.30",
+        "refDisplay": "Matthew 13:24-30, 36-43",
+        "refKeys": [
+          "Matt.13.24-Matt.13.30",
+          "Matt.13.36-Matt.13.43"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "9th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/31-9th-post-pentecost.md",
+    "occasion": "Proper 12 (17)",
+    "occasionId": "proper-12-17-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-07-26",
+    "date": "2026-07-22",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.29.15-Gen.29.28",
+        "refDisplay": "Genesis 29:15-28",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.105.1-Ps.105.11",
+        "refDisplay": "Psalm 105:1-11, 45b",
+        "refKeys": [
+          "Ps.105.1-Ps.105.11",
+          "Ps.105.45"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.128",
+        "refDisplay": "Psalm 128",
+        "track": "semicontinuous",
+        "alt": true
+      },
+      {
+        "role": "first",
+        "refKey": "1Kgs.3.5-1Kgs.3.12",
+        "refDisplay": "1 Kings 3:5-12",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.119.129-Ps.119.136",
+        "refDisplay": "Psalm 119:129-136",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.8.26-Rom.8.39",
+        "refDisplay": "Romans 8:26-39"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.13.31-Matt.13.33",
+        "refDisplay": "Matthew 13:31-33, 44-52",
+        "refKeys": [
+          "Matt.13.31-Matt.13.33",
+          "Matt.13.44-Matt.13.52"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "10th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/32-10th-post-pentecost.md",
+    "occasion": "Proper 13 (18)",
+    "occasionId": "proper-13-18-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-08-02",
+    "date": "2026-07-29",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.32.22-Gen.32.31",
+        "refDisplay": "Genesis 32:22-31",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.17.1-Ps.17.7",
+        "refDisplay": "Psalm 17:1-7, 15",
+        "refKeys": [
+          "Ps.17.1-Ps.17.7",
+          "Ps.17.15"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Isa.55.1-Isa.55.5",
+        "refDisplay": "Isaiah 55:1-5",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.145.8-Ps.145.9",
+        "refDisplay": "Psalm 145:8-9, 14-21",
+        "refKeys": [
+          "Ps.145.8-Ps.145.9",
+          "Ps.145.14-Ps.145.21"
+        ],
+        "multi": true,
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.9.1-Rom.9.5",
+        "refDisplay": "Romans 9:1-5"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.14.13-Matt.14.21",
+        "refDisplay": "Matthew 14:13-21"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "11th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/33-11th-post-pentecost.md",
+    "occasion": "Proper 14 (19)",
+    "occasionId": "proper-14-19-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-08-09",
+    "date": "2026-08-05",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.37.1-Gen.37.4",
+        "refDisplay": "Genesis 37:1-4, 12-28",
+        "refKeys": [
+          "Gen.37.1-Gen.37.4",
+          "Gen.37.12-Gen.37.28"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.105.1-Ps.105.6",
+        "refDisplay": "Psalm 105: 1-6, 16-22, 45b",
+        "refKeys": [
+          "Ps.105.1-Ps.105.6",
+          "Ps.105.16-Ps.105.22",
+          "Ps.105.45"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "1Kgs.19.9-1Kgs.19.18",
+        "refDisplay": "1 Kings 19:9-18",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.85.8-Ps.85.13",
+        "refDisplay": "Psalm 85:8-13",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.10.5-Rom.10.15",
+        "refDisplay": "Romans 10:5-15"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.14.22-Matt.14.33",
+        "refDisplay": "Matthew 14:22-33"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "12th Post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/34-12th-post-pentecost.md",
+    "occasion": "Proper 15 (20)",
+    "occasionId": "proper-15-20-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-08-16",
+    "date": "2026-08-12",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Gen.45.1-Gen.45.15",
+        "refDisplay": "Genesis 45:1-15",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.133",
+        "refDisplay": "Psalm 133",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Isa.56.1",
+        "refDisplay": "Isaiah 56:1, 6-8",
+        "refKeys": [
+          "Isa.56.1",
+          "Isa.56.6-Isa.56.8"
+        ],
+        "multi": true,
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.67",
+        "refDisplay": "Psalm 67",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.11.1-Rom.11.2",
+        "refDisplay": "Romans 11:1-2a, 29-32",
+        "refKeys": [
+          "Rom.11.1-Rom.11.2",
+          "Rom.11.29-Rom.11.32"
+        ],
+        "multi": true
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.15.21-Matt.15.28",
+        "refDisplay": "Matthew 15: (10-20), 21-28",
+        "refKeys": [
+          "Matt.15.21-Matt.15.28",
+          "Matt.15.10-Matt.15.20"
+        ],
+        "multi": true
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "13th Post Pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/35-13th-post-pentecost.md",
+    "occasion": "Proper 16 (21)",
+    "occasionId": "proper-16-21-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-08-23",
+    "date": "2026-08-19",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Exod.1.8-Exod.2.10",
+        "refDisplay": "Exodus 1:8-2:10",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.124",
+        "refDisplay": "Psalm 124",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Isa.51.1-Isa.51.6",
+        "refDisplay": "Isaiah 51:1-6",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.138",
+        "refDisplay": "Psalm 138",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.12.1-Rom.12.8",
+        "refDisplay": "Romans 12:1-8"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.16.13-Matt.16.20",
+        "refDisplay": "Matthew 16:13-20"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "14th post pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/36-14th-post-pentecost.md",
+    "occasion": "Proper 17 (22)",
+    "occasionId": "proper-17-22-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-08-30",
+    "date": "2026-08-26",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Exod.3.1-Exod.3.15",
+        "refDisplay": "Exodus 3:1-15",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.105.1-Ps.105.6",
+        "refDisplay": "Psalm 105:1-6, 23-26, 45b",
+        "refKeys": [
+          "Ps.105.1-Ps.105.6",
+          "Ps.105.23-Ps.105.26",
+          "Ps.105.45"
+        ],
+        "multi": true,
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Jer.15.15-Jer.15.21",
+        "refDisplay": "Jeremiah 15:15-21",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.26.1-Ps.26.8",
+        "refDisplay": "Psalm 26:1-8",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.12.9-Rom.12.21",
+        "refDisplay": "Romans 12:9-21"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.16.21-Matt.16.28",
+        "refDisplay": "Matthew 16:21-28"
+      }
+    ],
+    "existing": null
+  },
+  {
+    "drive_doc": "15th Post Pentecost",
+    "drive_path": "/Users/wilsonpruitt/Downloads/missives-2026/37-15th-post-pentecost.md",
+    "occasion": "Proper 18 (23)",
+    "occasionId": "proper-18-23-a",
+    "season": "Season after Pentecost",
+    "sunday": "2026-09-06",
+    "date": "2026-09-02",
+    "readings": [
+      {
+        "role": "first",
+        "refKey": "Exod.12.1-Exod.12.14",
+        "refDisplay": "Exodus 12:1-14",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.149",
+        "refDisplay": "Psalm 149",
+        "track": "semicontinuous"
+      },
+      {
+        "role": "first",
+        "refKey": "Ezek.33.7-Ezek.33.11",
+        "refDisplay": "Ezekiel 33:7-11",
+        "track": "complementary"
+      },
+      {
+        "role": "psalm",
+        "refKey": "Ps.119.33-Ps.119.40",
+        "refDisplay": "Psalm 119:33-40",
+        "track": "complementary"
+      },
+      {
+        "role": "second",
+        "refKey": "Rom.13.8-Rom.13.14",
+        "refDisplay": "Romans 13:8-14"
+      },
+      {
+        "role": "gospel",
+        "refKey": "Matt.18.15-Matt.18.20",
+        "refDisplay": "Matthew 18:15-20"
+      }
+    ],
+    "existing": null
+  }
+]

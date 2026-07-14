@@ -4,6 +4,37 @@ date: 2026-07-08
 author: "Celia Halfacre"
 excerpt: "On the parable of the sower — who tends the soil of our lives, and whose rocks we still cling to because familiar feels safer than free."
 draft: false
+occasion: "Proper 10 (15)"
+occasionId: "proper-10-15-a"
+season: "Season after Pentecost"
+kind: "reflection"
+epigraph:
+  refKey: "Matt.13.3"
+  refDisplay: "Matthew 13:3"
+readings:
+  - role: "first"
+    refKey: "Gen.25.19-Gen.25.34"
+    refDisplay: "Genesis 25:19-34"
+  - role: "psalm"
+    refKey: "Ps.119.105-Ps.119.112"
+    refDisplay: "Psalm 119:105-112"
+  - role: "first"
+    refKey: "Isa.55.10-Isa.55.13"
+    refDisplay: "Isaiah 55:10-13"
+  - role: "psalm"
+    refKey: "Ps.65.9-Ps.65.13"
+    refDisplay: "Psalm 65:(1-8), 9-13"
+  - role: "second"
+    refKey: "Rom.8.1-Rom.8.11"
+    refDisplay: "Romans 8:1-11"
+  - role: "gospel"
+    refKey: "Matt.13.1-Matt.13.9"
+    refDisplay: "Matthew 13:1-9, 18-23"
+tags:
+  theme: [grace, transformation]
+  image: [soil-and-seed, garden]
+  mood: [wry, tender]
+  ministry: [pastoral-care]
 ---
 
 > "And he told them many things in parables, saying: 'Listen! A sower went out to sow.'"

@@ -1,0 +1,125 @@
+---
+import Base from "../../../../layouts/Base.astro";
+import { scriptureIndex } from "../../../../lib/content";
+import { formatFullDate } from "../../../../lib/dates";
+import { bookName, bookSlug } from "../../../../lib/osis";
+
+export async function getStaticPaths() {
+  const index = await scriptureIndex();
+  return [...index.entries()].map(([code, entries]) => ({
+    params: { book: bookSlug(code) },
+    props: { code, entries },
+  }));
+}
+
+const { code, entries } = Astro.props;
+const name = bookName(code);
+const preached = entries.filter((e) => e.relation === "epigraph");
+const appointed = entries.filter((e) => e.relation === "appointed");
+---
+<Base
+  title={`${name} · Letters to the Order`}
+  description={`Letters to the order of elders that preach ${name}, and the Sundays on which it was appointed.`}
+  image="https://riotexas.orderofelders.org/og-riotexas.png"
+  url={`https://riotexas.orderofelders.org/letters/scripture/${bookSlug(code)}`}
+>
+  <header class="mast">
+    <div class="rules" aria-hidden="true"></div>
+    <div class="wrap bar">
+      <span class="label conf">Río Texas Conference</span>
+      <h1><a href="/">The Order of Elders</a></h1>
+      <nav aria-label="Site">
+        <a href="/#letters">Letters</a>
+        <a href="/#prayers">Prayer Wall</a>
+        <a href="/#calendar">Calendar</a>
+        <a href="/#map">Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap archive">
+      <p class="label" style="color:var(--red)">Letters by scripture</p>
+      <h2 class="sec">{name}</h2>
+
+      {preached.length > 0 && (
+        <>
+          <p class="group-label">Letters that preach {name}</p>
+          {preached.map(({ letter, refDisplay }) => (
+            <article class="letter">
+              <div class="when">
+                <time>{formatFullDate(letter.data.date)}</time>
+                <span class="ref">{refDisplay}</span>
+              </div>
+              <div>
+                <h3><a href={`/letters/${letter.id}`}>{letter.data.title}</a></h3>
+                <p>{letter.data.excerpt}</p>
+              </div>
+            </article>
+          ))}
+        </>
+      )}
+
+      {appointed.length > 0 && (
+        <>
+          <p class="group-label muted">
+            Appointed for the day &mdash; the letter preached another text
+          </p>
+          <ul class="also">
+            {appointed.map(({ letter, refDisplay }) => (
+              <li>
+                <a href={`/letters/${letter.id}`}>{letter.data.title}</a>
+                <span class="occ">
+                  {letter.data.occasion} &middot; {refDisplay}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      <p class="back"><a href="/letters/scripture">&larr; All books</a></p>
+    </section>
+  </main>
+
+  <Fragment slot="footer">
+    <span class="mark">The Order of Elders &middot; Río Texas</span>
+    <blockquote>"To maintain all confidences inviolate." &mdash; &para; 340</blockquote>
+    <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>.</p>
+  </Fragment>
+</Base>
+
+<style>
+  .mast { border-bottom: 1px solid var(--hair); }
+  .mast .rules { height: 10px; background: linear-gradient(var(--red) 0 3px, transparent 3px 7px, var(--red) 7px 10px); }
+  .mast .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding: 22px 0; }
+  .mast .conf { color: var(--smoke); }
+  .mast h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.5rem; letter-spacing: .01em; }
+  .mast h1 a { color: var(--ink); }
+  nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
+  nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+  nav a:hover { color: var(--red); text-decoration: none; }
+
+  .archive { padding: 72px 0 96px; }
+  .group-label { font-family: "Archivo", sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin: 2.6rem 0 .4rem; }
+  .group-label.muted { color: var(--smoke); margin-top: 3.4rem; }
+
+  .letter { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 26px 0; border-bottom: 1px solid var(--hair); }
+  @media (max-width: 580px) { .letter { grid-template-columns: 1fr; gap: 6px; } }
+  .letter .when { padding-top: .4rem; }
+  .letter time { display: block; font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); }
+  .letter .ref { display: block; margin-top: .3rem; font-family: "EB Garamond", serif; font-style: italic; color: var(--red-deep); }
+  .letter h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.45rem; margin-bottom: .3rem; }
+  .letter h3 a { color: var(--ink); }
+  .letter h3 a:hover { color: var(--red); }
+  .letter p { font-size: .97rem; color: #3B362E; max-width: 62ch; }
+
+  .also { list-style: none; padding: 0; margin: 0; }
+  .also li { padding: 9px 0; border-bottom: 1px solid var(--hair); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+  .also a { font-family: "EB Garamond", serif; font-size: 1.05rem; color: var(--ink); }
+  .also a:hover { color: var(--red); }
+  .also .occ { font-family: "Archivo", sans-serif; font-size: .72rem; color: var(--smoke); margin-left: auto; }
+
+  .back { margin-top: 3rem; }
+  .back a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+</style>

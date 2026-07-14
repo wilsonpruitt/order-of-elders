@@ -4,6 +4,40 @@ date: 2026-07-01
 author: "Celia Halfacre"
 excerpt: "On the exhausting pull toward doing it all, being it all, and giving it all — and why faithfulness isn't the same thing as pleasing everyone."
 draft: false
+occasion: "Proper 9 (14)"
+occasionId: "proper-9-14-a"
+season: "Season after Pentecost"
+kind: "reflection"
+epigraph:
+  refKey: "Matt.11.18-Matt.11.19"
+  refDisplay: "Matthew 11:18-19"
+readings:
+  - role: "first"
+    refKey: "Gen.24.34-Gen.24.38"
+    refDisplay: "Genesis 24:34-38, 42-49, 58-67"
+  - role: "psalm"
+    refKey: "Ps.45.10-Ps.45.17"
+    refDisplay: "Psalm 45:10-17"
+  - role: "psalm"
+    refKey: "Song.2.8-Song.2.13"
+    refDisplay: "Song of Solomon 2:8-13"
+  - role: "first"
+    refKey: "Zech.9.9-Zech.9.12"
+    refDisplay: "Zechariah 9:9-12"
+  - role: "psalm"
+    refKey: "Ps.145.8-Ps.145.14"
+    refDisplay: "Psalm 145:8-14"
+  - role: "second"
+    refKey: "Rom.7.15-Rom.7.25"
+    refDisplay: "Romans 7:15-25a"
+  - role: "gospel"
+    refKey: "Matt.11.16-Matt.11.19"
+    refDisplay: "Matthew 11:16-19, 25-30"
+tags:
+  theme: [rest-and-weariness, humility, collegiality]
+  image: []
+  mood: [confessional, consoling]
+  ministry: [weariness-and-burnout, self-doubt]
 ---
 
 > "For John came neither eating nor drinking, and they say, 'He has a demon'; the Son of Man came eating and drinking, and they say, 'Look, a glutton and a drunkard, a friend of tax collectors and sinners!' Yet wisdom is vindicated by her deeds."

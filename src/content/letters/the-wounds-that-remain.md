@@ -4,6 +4,37 @@ date: 2026-06-24
 author: "Celia Halfacre"
 excerpt: "On Genesis 22, the silence between Abraham and Isaac afterward, and what it means for the church to tell the truth about the harm it has caused."
 draft: false
+occasion: "Proper 8 (13)"
+occasionId: "proper-8-13-a"
+season: "Season after Pentecost"
+kind: "reflection"
+epigraph:
+  refKey: "Gen.22.2"
+  refDisplay: "Genesis 22:2"
+readings:
+  - role: "first"
+    refKey: "Gen.22.1-Gen.22.14"
+    refDisplay: "Genesis 22:1-14"
+  - role: "psalm"
+    refKey: "Ps.13"
+    refDisplay: "Psalm 13"
+  - role: "first"
+    refKey: "Jer.28.5-Jer.28.9"
+    refDisplay: "Jeremiah 28:5-9"
+  - role: "psalm"
+    refKey: "Ps.89.1-Ps.89.4"
+    refDisplay: "Psalm 89:1-4, 15-18"
+  - role: "second"
+    refKey: "Rom.6.12-Rom.6.23"
+    refDisplay: "Romans 6:12-23"
+  - role: "gospel"
+    refKey: "Matt.10.40-Matt.10.42"
+    refDisplay: "Matthew 10:40-42"
+tags:
+  theme: [shame-and-wounds, god-who-suffers-with-us, scripture-and-interpretation]
+  image: [wounds-and-scars, mountain-and-cloud]
+  mood: [lament, confessional]
+  ministry: [preaching-and-the-pulpit, pastoral-care]
 ---
 
 > "He said, 'Take your son, your only son Isaac, whom you love, and go to the land of Moriah and offer him there as a burnt offering on one of the mountains that I shall show you.'"

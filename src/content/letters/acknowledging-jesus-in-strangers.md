@@ -4,6 +4,37 @@ date: 2026-06-17
 author: "Celia Halfacre"
 excerpt: "On a free medical clinic, an eight-question community mapping tool, and the daily chance to recognize Christ in people you've just met."
 draft: false
+occasion: "Proper 7 (12)"
+occasionId: "proper-7-12-a"
+season: "Season after Pentecost"
+kind: "reflection"
+epigraph:
+  refKey: "Matt.10.32-Matt.10.33"
+  refDisplay: "Matthew 10:32-33"
+readings:
+  - role: "first"
+    refKey: "Gen.21.8-Gen.21.21"
+    refDisplay: "Genesis 21:8-21"
+  - role: "psalm"
+    refKey: "Ps.86.1-Ps.86.10"
+    refDisplay: "Psalm 86:1-10, 16-17"
+  - role: "first"
+    refKey: "Jer.20.7-Jer.20.13"
+    refDisplay: "Jeremiah 20:7-13"
+  - role: "psalm"
+    refKey: "Ps.69.7-Ps.69.10"
+    refDisplay: "Psalm 69:7-10, (11-15), 16-18"
+  - role: "second"
+    refKey: "Rom.6.1-Rom.6.11"
+    refDisplay: "Romans 6:1b-11"
+  - role: "gospel"
+    refKey: "Matt.10.24-Matt.10.39"
+    refDisplay: "Matthew 10:24-39"
+tags:
+  theme: [inclusion-and-belonging, evangelism, mercy]
+  image: [daily-work]
+  mood: [tender, playful]
+  ministry: [evangelism-and-outreach, pastoral-care]
 ---
 
 > "Everyone, therefore, who acknowledges me before others, I also will acknowledge before my Father in heaven, but whoever denies me before others, I also will deny before my Father in heaven."

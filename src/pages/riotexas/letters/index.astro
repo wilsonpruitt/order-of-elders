@@ -1,13 +1,23 @@
 ---
 import Base from "../../../layouts/Base.astro";
-import { publishedLetters } from "../../../lib/content";
+import { publishedLetters, tagsInUse } from "../../../lib/content";
 import { formatFullDate } from "../../../lib/dates";
+import { FACETS, tagLabel } from "../../../lib/tags";
 
 const letters = await publishedLetters();
+const used = await tagsInUse();
+
+// Only offer filters that actually return something — a chip that leads to an empty
+// list is worse than no chip at all.
+const groups = FACETS.map((facet) => ({
+  key: facet.key,
+  label: facet.label,
+  tags: used.filter((u) => u.facet === facet.key),
+})).filter((g) => g.tags.length > 0);
 ---
 <Base
   title="All letters · The Order of Elders"
-  description="Letters to the order from the chair of the Río Texas Conference — the ordinary life of the covenant, made visible."
+  description="Letters to the order from the chair of the Río Texas Conference — searchable by what you're carrying, by theme, and by scripture."
   image="https://riotexas.orderofelders.org/og-riotexas.png"
   url="https://riotexas.orderofelders.org/letters"
 >
@@ -29,15 +39,55 @@ const letters = await publishedLetters();
     <section class="wrap archive">
       <p class="label" style="color:var(--red)">From the Chair</p>
       <h2 class="sec">All letters to the order</h2>
-      {letters.map((letter) => (
-        <article class="letter">
-          <time>{formatFullDate(letter.data.date)}</time>
-          <div>
-            <h3><a href={`/letters/${letter.id}`}>{letter.data.title}</a></h3>
-            <p>{letter.data.excerpt}</p>
+      <p class="lede">
+        {letters.length} letters. Filter by what you are carrying this week, or
+        <a href="/letters/scripture">browse by scripture</a>.
+      </p>
+
+      <div class="layout">
+        <aside class="filters" aria-label="Filter letters">
+          {groups.map((group) => (
+            <div class="facet">
+              <p class="facet-label">{group.label}</p>
+              <div class="chips">
+                {group.tags.map((t) => (
+                  <button class="chip" data-facet={group.key} data-tag={t.tag} aria-pressed="false">
+                    {tagLabel(t.tag)} <span class="n">{t.count}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+          <button class="clear" hidden>Clear filters</button>
+        </aside>
+
+        <div>
+          <p class="count" aria-live="polite"></p>
+          <div class="results">
+            {letters.map((letter) => (
+              <article
+                class="letter"
+                data-theme={letter.data.tags.theme.join(" ")}
+                data-image={letter.data.tags.image.join(" ")}
+                data-mood={letter.data.tags.mood.join(" ")}
+                data-ministry={letter.data.tags.ministry.join(" ")}
+              >
+                <div class="when">
+                  <time>{formatFullDate(letter.data.date)}</time>
+                  {letter.data.occasion && <span class="occ">{letter.data.occasion}</span>}
+                </div>
+                <div>
+                  <h3><a href={`/letters/${letter.id}`}>{letter.data.title}</a></h3>
+                  <p>{letter.data.excerpt}</p>
+                  {letter.data.epigraph && <p class="ref">{letter.data.epigraph.refDisplay}</p>}
+                </div>
+              </article>
+            ))}
           </div>
-        </article>
-      ))}
+          <p class="empty" hidden>No letters carry every tag you have selected. Try removing one.</p>
+        </div>
+      </div>
+
       <p class="back"><a href="/#letters">&larr; Back to the conference page</a></p>
     </section>
   </main>
@@ -48,6 +98,61 @@ const letters = await publishedLetters();
     <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>.</p>
   </Fragment>
 </Base>
+
+<script>
+  const chips = [...document.querySelectorAll<HTMLButtonElement>(".chip")];
+  const letters = [...document.querySelectorAll<HTMLElement>(".letter")];
+  const clear = document.querySelector<HTMLButtonElement>(".clear")!;
+  const count = document.querySelector<HTMLElement>(".count")!;
+  const empty = document.querySelector<HTMLElement>(".empty")!;
+
+  const active = new Set<string>();
+
+  // Deep link: /letters?tag=ministry:church-conflict — a tag on a letter page lands
+  // here with that filter already applied.
+  for (const value of new URLSearchParams(location.search).getAll("tag")) {
+    const chip = chips.find((c) => `${c.dataset.facet}:${c.dataset.tag}` === value);
+    if (chip) {
+      active.add(value);
+      chip.setAttribute("aria-pressed", "true");
+    }
+  }
+
+  function apply() {
+    // A letter must carry EVERY selected tag (AND, not OR): selections narrow.
+    let shown = 0;
+    for (const letter of letters) {
+      const match = [...active].every((sel) => {
+        const [facet, tag] = sel.split(":");
+        return (letter.dataset[facet] ?? "").split(" ").includes(tag);
+      });
+      letter.hidden = !match;
+      if (match) shown++;
+    }
+    clear.hidden = active.size === 0;
+    empty.hidden = shown > 0;
+    count.textContent = active.size === 0 ? "" : `${shown} of ${letters.length} letters`;
+  }
+
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      const key = `${chip.dataset.facet}:${chip.dataset.tag}`;
+      const on = !active.has(key);
+      if (on) active.add(key);
+      else active.delete(key);
+      chip.setAttribute("aria-pressed", String(on));
+      apply();
+    });
+  }
+
+  clear.addEventListener("click", () => {
+    active.clear();
+    for (const chip of chips) chip.setAttribute("aria-pressed", "false");
+    apply();
+  });
+
+  apply();
+</script>
 
 <style>
   .mast { border-bottom: 1px solid var(--hair); }
@@ -61,15 +166,52 @@ const letters = await publishedLetters();
   nav a:hover { color: var(--red); text-decoration: none; }
 
   .archive { padding: 72px 0 96px; }
-  .letter { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 30px 0; border-bottom: 1px solid var(--hair); }
+  .archive .lede { color: var(--smoke); max-width: 62ch; margin-top: .6rem; }
+
+  /* Filter rail beside the letters, so the archive itself is the first thing read.
+     Stacked above the results on narrow screens. */
+  .layout { display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 56px; align-items: start; margin-top: 2.6rem; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 0; }
+    .filters { position: static; margin-bottom: 2rem; padding-bottom: 24px; border-bottom: 1px solid var(--hair); }
+  }
+
+  .filters { position: sticky; top: 32px; }
+  .facet { margin-bottom: 1.4rem; }
+  .facet:last-of-type { margin-bottom: 0; }
+  .facet-label { font-family: "Archivo", sans-serif; font-size: .64rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--smoke); margin-bottom: .5rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip {
+    font-family: "Archivo", sans-serif; font-size: .72rem; font-weight: 500;
+    padding: 4px 9px; border: 1px solid var(--hair); border-radius: 999px;
+    background: transparent; color: var(--ink); cursor: pointer; line-height: 1.4;
+  }
+  .chip:hover { border-color: var(--red); color: var(--red); }
+  .chip[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: #fff; }
+  .chip .n { color: var(--smoke); font-size: .7rem; margin-left: 2px; }
+  .chip[aria-pressed="true"] .n { color: rgba(255,255,255,.72); }
+  .clear {
+    margin-top: 1.2rem; background: none; border: none; cursor: pointer; padding: 0;
+    font-family: "Archivo", sans-serif; font-weight: 600; font-size: .72rem;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--red);
+  }
+
+  .count { font-family: "Archivo", sans-serif; font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--smoke); margin: 0; }
+  .count:not(:empty) { margin-bottom: 1rem; }
+
+  .letter { display: grid; grid-template-columns: 130px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--hair); }
   @media (max-width: 580px) { .letter { grid-template-columns: 1fr; gap: 6px; } }
   .letter:last-of-type { border-bottom: none; }
-  .letter time { font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); padding-top: .5rem; }
+  .letter .when { padding-top: .5rem; }
+  .letter time { display: block; font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); }
+  .letter .occ { display: block; margin-top: .3rem; font-family: "EB Garamond", serif; font-style: italic; font-size: .9rem; color: var(--smoke); }
   .letter h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.45rem; margin-bottom: .3rem; }
   .letter h3 a { color: var(--ink); }
   .letter h3 a:hover { color: var(--red); }
   .letter p { font-size: .97rem; color: #3B362E; max-width: 62ch; }
+  .letter .ref { margin-top: .35rem; font-family: "Archivo", sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--smoke); }
 
+  .empty { margin-top: 2rem; color: var(--smoke); font-family: "EB Garamond", serif; font-style: italic; }
   .archive .back { margin-top: 3rem; }
   .archive .back a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
 </style>

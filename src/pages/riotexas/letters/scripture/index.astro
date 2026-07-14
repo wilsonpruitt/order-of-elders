@@ -1,0 +1,100 @@
+---
+import Base from "../../../../layouts/Base.astro";
+import { scriptureIndex } from "../../../../lib/content";
+import { bookName, bookSlug, canonicalIndex } from "../../../../lib/osis";
+
+const index = await scriptureIndex();
+
+// Genesis to Revelation, not alphabetical.
+const books = [...index.entries()]
+  .map(([code, entries]) => ({
+    code,
+    entries,
+    preached: entries.filter((e) => e.relation === "epigraph").length,
+  }))
+  .sort((a, b) => canonicalIndex(a.code) - canonicalIndex(b.code));
+
+const preachedTotal = books.reduce((n, b) => n + b.preached, 0);
+---
+<Base
+  title="Letters by scripture · The Order of Elders"
+  description="Every letter to the order, indexed by the scripture it preaches and by the readings appointed for the day."
+  image="https://riotexas.orderofelders.org/og-riotexas.png"
+  url="https://riotexas.orderofelders.org/letters/scripture"
+>
+  <header class="mast">
+    <div class="rules" aria-hidden="true"></div>
+    <div class="wrap bar">
+      <span class="label conf">Río Texas Conference</span>
+      <h1><a href="/">The Order of Elders</a></h1>
+      <nav aria-label="Site">
+        <a href="/#letters">Letters</a>
+        <a href="/#prayers">Prayer Wall</a>
+        <a href="/#calendar">Calendar</a>
+        <a href="/#map">Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap archive">
+      <p class="label" style="color:var(--red)">From the Chair</p>
+      <h2 class="sec">Letters by scripture</h2>
+      <p class="lede">
+        {books.length} books. The bold number counts the letters that actually
+        <em>preach</em> that book; the rest were among the readings appointed for the
+        day. <a href="/letters">Back to all letters</a>.
+      </p>
+
+      <ul class="books">
+        {books.map((book) => (
+          <li>
+            <a href={`/letters/scripture/${bookSlug(book.code)}`}>
+              <span class="name">{bookName(book.code)}</span>
+              {book.preached > 0 && <span class="preached">{book.preached}</span>}
+              <span class="appointed">{book.entries.length - book.preached}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <p class="foot">
+        {preachedTotal} letters are keyed to the verse they preach. Every reference
+        carries an OSIS key, so this archive joins to the lectionary rather than
+        merely resembling it.
+      </p>
+    </section>
+  </main>
+
+  <Fragment slot="footer">
+    <span class="mark">The Order of Elders &middot; Río Texas</span>
+    <blockquote>"To maintain all confidences inviolate." &mdash; &para; 340</blockquote>
+    <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>.</p>
+  </Fragment>
+</Base>
+
+<style>
+  .mast { border-bottom: 1px solid var(--hair); }
+  .mast .rules { height: 10px; background: linear-gradient(var(--red) 0 3px, transparent 3px 7px, var(--red) 7px 10px); }
+  .mast .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding: 22px 0; }
+  .mast .conf { color: var(--smoke); }
+  .mast h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.5rem; letter-spacing: .01em; }
+  .mast h1 a { color: var(--ink); }
+  nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
+  nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+  nav a:hover { color: var(--red); text-decoration: none; }
+
+  .archive { padding: 72px 0 96px; }
+  .archive .lede { color: var(--smoke); max-width: 62ch; margin-top: .6rem; }
+
+  .books { list-style: none; margin: 2.6rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0 32px; }
+  .books li { border-bottom: 1px solid var(--hair); }
+  .books a { display: flex; align-items: baseline; gap: 8px; padding: 11px 0; color: var(--ink); }
+  .books a:hover { color: var(--red); text-decoration: none; }
+  .books a:hover .name { text-decoration: underline; }
+  .name { font-family: "EB Garamond", serif; font-size: 1.1rem; flex: 1; }
+  .preached { font-family: "Archivo", sans-serif; font-size: .72rem; font-weight: 700; color: var(--red); }
+  .appointed { font-family: "Archivo", sans-serif; font-size: .72rem; color: var(--smoke); min-width: 1.2em; text-align: right; }
+
+  .foot { margin-top: 3rem; color: var(--smoke); font-size: .92rem; max-width: 62ch; }
+</style>

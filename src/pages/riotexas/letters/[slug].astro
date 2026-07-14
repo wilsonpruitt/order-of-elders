@@ -1,8 +1,10 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import { render } from "astro:content";
-import { published } from "../../../lib/content";
+import { published, relatedLetters } from "../../../lib/content";
 import { formatFullDate } from "../../../lib/dates";
+import { FACETS, tagLabel } from "../../../lib/tags";
+import { bookOf, bookSlug, bookName } from "../../../lib/osis";
 
 export async function getStaticPaths() {
   const letters = await published("letters");
@@ -14,6 +16,19 @@ export async function getStaticPaths() {
 
 const { letter } = Astro.props;
 const { Content } = await render(letter);
+const related = await relatedLetters(letter);
+
+const tagged = FACETS.map((facet) => ({
+  key: facet.key,
+  label: facet.label,
+  tags: letter.data.tags[facet.key],
+})).filter((f) => f.tags.length > 0);
+
+// The lectionary appoints two tracks in Ordinary Time, so the same role appears
+// twice. Dedupe on the reference itself, not the role.
+const readings = letter.data.readings.filter(
+  (r, i, all) => all.findIndex((o) => o.refKey === r.refKey) === i,
+);
 ---
 <Base
   title={`${letter.data.title} · The Order of Elders`}
@@ -36,16 +51,65 @@ const { Content } = await render(letter);
   </header>
 
   <main>
-    <article class="wrap letter-detail">
-      <p class="label" style="color:var(--red)">From the Chair</p>
-      <time>{formatFullDate(letter.data.date)}</time>
-      <h1>{letter.data.title}</h1>
-      <div class="body">
-        <Content />
-      </div>
-      <p class="signed">&mdash; {letter.data.author}</p>
-      <p class="back"><a href="/letters">&larr; Back to all letters</a></p>
-    </article>
+    <div class="wrap letter-layout">
+      <article class="letter-detail">
+        <p class="label" style="color:var(--red)">
+          {letter.data.kind === "announcement" ? "To the Order" : "From the Chair"}
+        </p>
+        <time>
+          {formatFullDate(letter.data.date)}
+          {letter.data.occasion && <span class="occ">&middot; {letter.data.occasion}</span>}
+        </time>
+        <h1>{letter.data.title}</h1>
+        <div class="body">
+          <Content />
+        </div>
+        <p class="signed">&mdash; {letter.data.author}</p>
+        <p class="back"><a href="/letters">&larr; Back to all letters</a></p>
+      </article>
+
+      <aside class="rail" aria-label="About this letter">
+        {readings.length > 0 && (
+          <section>
+            <p class="rail-label">Appointed readings</p>
+            <ul class="readings">
+              {readings.map((r) => (
+                <li>
+                  <a href={`/letters/scripture/${bookSlug(bookOf(r.refKey))}`}>{r.refDisplay}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {tagged.map((facet) => (
+          <section>
+            <p class="rail-label">{facet.label}</p>
+            <div class="chips">
+              {facet.tags.map((tag) => (
+                <a class="chip" href={`/letters?tag=${facet.key}:${tag}`}>{tagLabel(tag)}</a>
+              ))}
+            </div>
+          </section>
+        ))}
+
+        {related.length > 0 && (
+          <section>
+            <p class="rail-label">Related letters</p>
+            <ul class="related">
+              {related.map(({ letter: other, shared }) => (
+                <li>
+                  <a href={`/letters/${other.id}`}>{other.data.title}</a>
+                  <span class="why">
+                    {[...new Set(shared.map((s) => tagLabel(s.tag)))].slice(0, 2).join(" · ")}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </aside>
+    </div>
   </main>
 
   <Fragment slot="footer">
@@ -66,7 +130,7 @@ const { Content } = await render(letter);
   nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
   nav a:hover { color: var(--red); text-decoration: none; }
 
-  .letter-detail { padding: 72px 0 96px; max-width: 680px; }
+  .letter-detail { max-width: 680px; }
   .letter-detail time { display: block; font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); margin: .6rem 0 .6rem; }
   .letter-detail h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 2.4rem; margin-bottom: 1.8rem; line-height: 1.15; }
   .letter-detail .body { font-size: 1.02rem; color: #3B362E; }
@@ -82,6 +146,41 @@ const { Content } = await render(letter);
     letter-spacing: .16em; text-transform: uppercase; color: var(--smoke);
   }
   .letter-detail .signed { margin-top: 1.6rem; font-family: "EB Garamond", serif; font-style: italic; color: var(--smoke); }
+  .letter-detail time .occ { text-transform: none; letter-spacing: 0; font-family: "EB Garamond", serif; font-style: italic; font-size: .95rem; }
+
+  /* Reading column + a side rail for the apparatus. The rail must never crowd the
+     letter: the prose keeps its measure and the rail takes what is left. */
+  .letter-layout { display: grid; grid-template-columns: minmax(0, 680px) 232px; gap: 64px; align-items: start; padding: 72px 0 96px; }
+  @media (max-width: 1040px) {
+    .letter-layout { grid-template-columns: minmax(0, 680px); gap: 0; }
+    .rail { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--hair); }
+  }
+
+  .rail { position: sticky; top: 32px; }
+  @media (max-width: 1040px) { .rail { position: static; } }
+  .rail section { margin-bottom: 1.9rem; }
+  .rail section:last-child { margin-bottom: 0; }
+  .rail-label { font-family: "Archivo", sans-serif; font-size: .64rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--smoke); margin-bottom: .6rem; }
+
+  .readings { list-style: none; padding: 0; margin: 0; }
+  .readings li { margin-bottom: .3rem; }
+  .readings a { font-family: "EB Garamond", serif; font-size: 1rem; color: var(--red-deep); }
+  .readings a:hover { color: var(--red); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip {
+    font-family: "Archivo", sans-serif; font-size: .72rem; padding: 3px 9px;
+    border: 1px solid var(--hair); border-radius: 999px; color: var(--ink); line-height: 1.5;
+  }
+  .chip:hover { border-color: var(--red); color: var(--red); text-decoration: none; }
+
+  .related { list-style: none; padding: 0; margin: 0; }
+  .related li { padding: 7px 0; border-bottom: 1px solid var(--hair); }
+  .related li:last-child { border-bottom: none; }
+  .related a { display: block; font-family: "EB Garamond", serif; font-size: 1rem; color: var(--ink); line-height: 1.3; }
+  .related a:hover { color: var(--red); }
+  .related .why { display: block; margin-top: .15rem; font-family: "Archivo", sans-serif; font-size: .64rem; letter-spacing: .06em; color: var(--smoke); }
+
   .letter-detail .back { margin-top: 3rem; }
   .letter-detail .back a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
 </style>
