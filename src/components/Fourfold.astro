@@ -1,0 +1,57 @@
+---
+interface FourfoldItem {
+  name: string;
+  sub: string;
+  body: string;
+}
+interface Props {
+  intro: string;
+  items: [FourfoldItem, FourfoldItem, FourfoldItem, FourfoldItem];
+  framed?: boolean;
+}
+const { intro, items, framed = false } = Astro.props;
+---
+<div class:list={["fourfold", "wrap", { framed }]}>
+  <p class="intro">{intro}</p>
+  <div class="cross" role="list">
+    {items.map((item) => (
+      <section role="listitem">
+        <h2>{item.name}</h2>
+        <p class="gk">{item.sub}</p>
+        <p>{item.body}</p>
+      </section>
+    ))}
+  </div>
+</div>
+
+<style>
+  .fourfold { padding: 24px 0 96px; }
+  .fourfold .intro { max-width: 620px; margin: 0 auto 56px; text-align: center; color: var(--smoke); }
+  .cross {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; background: var(--red);
+    border: 1px solid var(--hair);
+    max-width: 880px; margin: 0 auto;
+  }
+  .cross section { background: var(--paper); padding: 44px 40px; }
+  .cross h2 {
+    font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.7rem; margin-bottom: .35rem;
+  }
+  .cross .gk {
+    font-family: "EB Garamond", serif; font-style: italic; color: var(--gold);
+    font-size: .95rem; margin-bottom: .9rem;
+  }
+  .cross p { font-size: .98rem; color: #3B362E; }
+  @media (max-width: 680px) { .cross { grid-template-columns: 1fr; } }
+
+  /* local pastors: the fourfold grid wrapped in the same bounded frame as the hero */
+  .fourfold.framed .cross {
+    border: 2px solid var(--red);
+    padding: 2px;
+    position: relative;
+  }
+  .fourfold.framed .cross::after {
+    content: "\271B"; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%);
+    color: var(--gold); font-size: 15px; line-height: 1; background: var(--paper); padding: 0 6px;
+  }
+</style>

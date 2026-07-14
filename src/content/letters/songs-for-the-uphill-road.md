@@ -4,6 +4,8 @@ date: 2026-02-25
 author: "Celia Halfacre"
 excerpt: "On camp songs, pilgrim psalms, and who keeps us in a wilderness that has no keeper but God."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Second Sunday in Lent"
 occasionId: "second-sunday-in-lent-a"
 season: "Lent"

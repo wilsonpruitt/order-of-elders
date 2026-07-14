@@ -4,6 +4,8 @@ date: 2026-01-28
 author: "Celia Halfacre"
 excerpt: "On Micah's accusation against the deeply religious and deeply unjust — and why ordinary faithfulness has become an act of rebellion."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Fourth Sunday after the Epiphany"
 occasionId: "fourth-sunday-after-the-epiphany-a"
 season: "Epiphany"

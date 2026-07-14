@@ -4,6 +4,8 @@ date: 2026-05-20
 author: "Celia Halfacre"
 excerpt: "On a Spirit who is not a labor-saving device, tiny Pentecosts, and sparks that refuse to stay inside the plan."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Day of Pentecost"
 occasionId: "day-of-pentecost-a"
 season: "Pentecost"

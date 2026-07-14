@@ -4,6 +4,8 @@ date: 2026-08-19
 author: "Celia Halfacre"
 excerpt: "On midwives who turned the oppressor's own contempt into a tool of resistance — and whether we are willing to learn how."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 16 (21)"
 occasionId: "proper-16-21-a"
 season: "Season after Pentecost"

@@ -2,6 +2,9 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import { THEMES, IMAGES, MOODS, MINISTRY } from "./lib/tags";
 
+const orderEnum = z.enum(["elders", "deacons", "local-pastors"]);
+const conferenceEnum = z.enum(["riotexas"]);
+
 /** A scripture reference always carries both keys — see docs/TAGGING.md. */
 const reference = z.object({
   refKey: z.string(),      // OSIS, for joins: "Matt.13.1-Matt.13.9"
@@ -16,6 +19,8 @@ const letters = defineCollection({
     author: z.string(),
     excerpt: z.string(),
     draft: z.boolean().default(false),
+    order: orderEnum,
+    conference: conferenceEnum,
 
     // Liturgical facts, joined from the RCL spine. Optional so a letter not tied to
     // a Sunday (a guest letter, an announcement) is still valid.
@@ -50,6 +55,8 @@ const prayers = defineCollection({
     status: z.enum(["active", "answered", "archived"]),
     expires: z.coerce.date().optional(),
     draft: z.boolean().default(false),
+    order: orderEnum,
+    conference: conferenceEnum,
   }),
 });
 
@@ -64,6 +71,8 @@ const events = defineCollection({
     url: z.string().url().optional(),
     description: z.string().optional(),
     draft: z.boolean().default(false),
+    orders: z.array(orderEnum).min(1),
+    conference: conferenceEnum,
   }),
 });
 

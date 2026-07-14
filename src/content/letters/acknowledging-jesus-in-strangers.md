@@ -4,6 +4,8 @@ date: 2026-06-17
 author: "Celia Halfacre"
 excerpt: "On a free medical clinic, an eight-question community mapping tool, and the daily chance to recognize Christ in people you've just met."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Proper 7 (12)"
 occasionId: "proper-7-12-a"
 season: "Season after Pentecost"

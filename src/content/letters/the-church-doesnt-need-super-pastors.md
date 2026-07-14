@@ -4,6 +4,8 @@ date: 2026-07-01
 author: "Celia Halfacre"
 excerpt: "On the exhausting pull toward doing it all, being it all, and giving it all — and why faithfulness isn't the same thing as pleasing everyone."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Proper 9 (14)"
 occasionId: "proper-9-14-a"
 season: "Season after Pentecost"

@@ -4,6 +4,8 @@ date: 2025-12-31
 author: "Celia Halfacre"
 excerpt: "On a song, the magi's detour, and a Spirit who still finds paths around what looks impenetrable."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Epiphany of the Lord"
 occasionId: "epiphany-of-the-lord-a"
 season: "Epiphany"

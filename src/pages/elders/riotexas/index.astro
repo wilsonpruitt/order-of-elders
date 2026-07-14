@@ -1,0 +1,98 @@
+---
+import Base from "../../../layouts/Base.astro";
+import Masthead from "../../../components/Masthead.astro";
+import PrayerWall from "../../../components/PrayerWall.astro";
+import Calendar from "../../../components/Calendar.astro";
+import { publishedLetters, publishedPrayers, publishedEvents } from "../../../lib/content";
+import { formatMonthYear } from "../../../lib/dates";
+
+const letters = (await publishedLetters("elders", "riotexas")).slice(0, 3);
+const prayers = (await publishedPrayers("elders", "riotexas")).slice(0, 3);
+const events = await publishedEvents("elders", "riotexas");
+
+const submitHref = `mailto:hello@orderofelders.org?subject=${encodeURIComponent("Prayer request — Order of Elders")}`;
+---
+<Base
+  order="elders"
+  title="Order of Elders · Río Texas Conference"
+  description="The shared home of the elders of the Río Texas Annual Conference — letters from the chair, a public prayer wall, and the calendar of the order."
+  image="https://riotexas.orderofelders.org/og-riotexas.png"
+  url="https://riotexas.orderofelders.org/"
+>
+  <Masthead order="elders" title="The Order of Elders" conferenceLabel="Río Texas Conference" />
+
+  <main>
+    <section class="wrap greet">
+      <div>
+        <p class="label" style="color:var(--red)">Grace and peace</p>
+        <h2>Watching over one another in love</h2>
+        <p>This is the shared home of the elders of the Río Texas Annual Conference — a place for the letters we write one another, the prayers we carry together, and the days we set apart to gather. Everything here is public on purpose: the covenant of the order, made visible.</p>
+        <a class="cta" href="#prayers">Submit a prayer request</a>
+      </div>
+      <blockquote class="verse">
+        "Elders have a fourfold ministry of Word, Sacrament, Order, and Service."
+        <cite>The Book of Discipline, &para; 340</cite>
+      </blockquote>
+    </section>
+
+    <PrayerWall prayers={prayers} submitHref={submitHref} />
+
+    <section class="letters" id="letters">
+      <div class="wrap">
+        <p class="label" style="color:var(--red)">From the Chair</p>
+        <h2 class="sec">Letters to the order</h2>
+        {letters.map((letter) => (
+          <article class="letter">
+            <time>{formatMonthYear(letter.data.date)}</time>
+            <div>
+              <h3><a href={`/letters/${letter.id}`}>{letter.data.title}</a></h3>
+              <p>{letter.data.excerpt}</p>
+            </div>
+          </article>
+        ))}
+        <p style="margin-top:1.4rem"><a class="more" href="/letters">Read all letters &rarr;</a></p>
+      </div>
+    </section>
+
+    <Calendar events={events} />
+
+  </main>
+
+  <Fragment slot="footer">
+    <span class="mark">The Order of Elders &middot; Río Texas</span>
+    <blockquote>"To maintain all confidences inviolate." &mdash; &para; 340</blockquote>
+    <p>An independent project of the order. Part of <a href="https://orderofelders.org">orderofelders.org</a>. Prayer requests are moderated before publication.</p>
+  </Fragment>
+</Base>
+
+<style>
+  h2.sec { color: var(--ink); }
+
+  /* ---------- greeting ---------- */
+  .greet { padding: 72px 0 64px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: end; }
+  @media (max-width: 760px) { .greet { grid-template-columns: 1fr; gap: 28px; padding-top: 52px; } }
+  .greet h2 { font-family: "EB Garamond", serif; font-weight: 500; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.12; margin: .5rem 0 1.1rem; }
+  .greet p { max-width: 56ch; color: #3B362E; }
+  .cta {
+    display: inline-block; margin-top: 1.4rem; padding: 14px 26px;
+    background: var(--red); color: #F7F3EA; border: none;
+    font-family: "Archivo", sans-serif; font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .cta:hover { background: var(--red-deep); text-decoration: none; }
+  .verse {
+    border-left: 3px solid var(--gold); padding: 6px 0 6px 22px;
+    font-family: "EB Garamond", serif; font-style: italic; font-size: 1.15rem; color: var(--red-deep);
+  }
+  .verse cite { display: block; margin-top: .7rem; font-style: normal; font-family: "Archivo", sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--smoke); }
+
+  /* ---------- letters ---------- */
+  .letters { border-top: 1px solid var(--hair); padding: 72px 0; }
+  .letter { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 30px 0; border-bottom: 1px solid var(--hair); }
+  @media (max-width: 580px) { .letter { grid-template-columns: 1fr; gap: 6px; } }
+  .letter:last-of-type { border-bottom: none; }
+  .letter time { font-family: "Archivo", sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); padding-top: .5rem; }
+  .letter h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.45rem; margin-bottom: .3rem; }
+  .letter h3 a { color: var(--ink); }
+  .letter h3 a:hover { color: var(--red); }
+  .letter p { font-size: .97rem; color: #3B362E; max-width: 62ch; }
+</style>

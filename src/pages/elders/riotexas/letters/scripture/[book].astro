@@ -1,8 +1,8 @@
 ---
-import Base from "../../../../layouts/Base.astro";
-import { scriptureIndex } from "../../../../lib/content";
-import { formatFullDate } from "../../../../lib/dates";
-import { bookName, bookSlug } from "../../../../lib/osis";
+import Base from "../../../../../layouts/Base.astro";
+import { scriptureIndex } from "../../../../../lib/content";
+import { formatFullDate } from "../../../../../lib/dates";
+import { bookName, bookSlug } from "../../../../../lib/osis";
 
 export async function getStaticPaths() {
   const index = await scriptureIndex();
@@ -18,6 +18,7 @@ const preached = entries.filter((e) => e.relation === "epigraph");
 const appointed = entries.filter((e) => e.relation === "appointed");
 ---
 <Base
+  order="elders"
   title={`${name} · Letters to the Order`}
   description={`Letters to the order of elders that preach ${name}, and the Sundays on which it was appointed.`}
   image="https://riotexas.orderofelders.org/og-riotexas.png"

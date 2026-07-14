@@ -4,6 +4,8 @@ date: 2026-02-11
 author: "Celia Halfacre"
 excerpt: "On Torah as gift rather than law, and a transformation that takes a lifetime instead of a moment."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Transfiguration Sunday"
 occasionId: "transfiguration-sunday-a"
 season: "Epiphany"

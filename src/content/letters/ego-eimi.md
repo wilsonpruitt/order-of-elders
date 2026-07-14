@@ -4,6 +4,8 @@ date: 2026-08-05
 author: "Celia Halfacre"
 excerpt: "On translating when nobody asked you to, and finding 'I am' in the middle of the storm."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 14 (19)"
 occasionId: "proper-14-19-a"
 season: "Season after Pentecost"

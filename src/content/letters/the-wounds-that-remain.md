@@ -4,6 +4,8 @@ date: 2026-06-24
 author: "Celia Halfacre"
 excerpt: "On Genesis 22, the silence between Abraham and Isaac afterward, and what it means for the church to tell the truth about the harm it has caused."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Proper 8 (13)"
 occasionId: "proper-8-13-a"
 season: "Season after Pentecost"

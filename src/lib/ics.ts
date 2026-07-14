@@ -1,5 +1,11 @@
-import type { APIRoute } from "astro";
-import { publishedEvents } from "../../lib/content";
+import type { CollectionEntry } from "astro:content";
+
+export interface IcsSite {
+  /** Used in UID/PRODID/filename — the order's apex domain, e.g. "orderofelders.org" */
+  domain: string;
+  /** Human name for X-WR-CALNAME, e.g. "Order of Elders" */
+  name: string;
+}
 
 /** iCalendar DTEND is exclusive for all-day events: a June 14–17 conference ends June 18. */
 function dayAfter(d: Date): Date {
@@ -19,16 +25,14 @@ function escapeText(s: string): string {
   return s.replace(/\\/g, "\\\\").replace(/,/g, "\\,").replace(/;/g, "\\;").replace(/\n/g, "\\n");
 }
 
-export const GET: APIRoute = async () => {
-  const events = await publishedEvents();
-
+export function buildIcsFeed(site: IcsSite, events: CollectionEntry<"events">[]): string {
   const veventBlocks = events
     .map((event) => {
       const start = icsDate(event.data.start, true);
       const end = icsDate(dayAfter(event.data.end ?? event.data.start), true);
       const lines = [
         "BEGIN:VEVENT",
-        `UID:${event.id}@orderofelders.org`,
+        `UID:${event.id}@${site.domain}`,
         `DTSTAMP:${icsDate(new Date(0), false)}`,
         `DTSTART;VALUE=DATE:${start}`,
         `DTEND;VALUE=DATE:${end}`,
@@ -41,20 +45,13 @@ export const GET: APIRoute = async () => {
     })
     .join("\r\n");
 
-  const body = [
+  return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Order of Elders//Río Texas//EN",
+    `PRODID:-//${site.name}//Río Texas//EN`,
     "CALSCALE:GREGORIAN",
-    "X-WR-CALNAME:Order of Elders — Río Texas",
+    `X-WR-CALNAME:${site.name} — Río Texas`,
     veventBlocks,
     "END:VCALENDAR",
   ].join("\r\n");
-
-  return new Response(body, {
-    headers: {
-      "Content-Type": "text/calendar; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="order-of-elders-riotexas.ics"',
-    },
-  });
-};
+}

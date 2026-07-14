@@ -4,6 +4,8 @@ date: 2026-03-11
 author: "Celia Halfacre"
 excerpt: "On Eliab, the island of misfit toys, and everyone who has been passed over and left unnamed."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Fourth Sunday in Lent"
 occasionId: "fourth-sunday-in-lent-a"
 season: "Lent"

@@ -5,4 +5,6 @@ end: 2027-06-17
 location: "Hilliard Center, Corpus Christi"
 kind: conference
 draft: false
+orders: ["elders", "deacons", "local-pastors"]
+conference: riotexas
 ---

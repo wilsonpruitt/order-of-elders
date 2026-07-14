@@ -4,6 +4,8 @@ date: 2026-09-02
 author: "Celia Halfacre"
 excerpt: "On a verse we quote to excuse a thin crowd, and the church conflict it was actually about."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 18 (23)"
 occasionId: "proper-18-23-a"
 season: "Season after Pentecost"

@@ -1,10 +1,10 @@
 ---
-import Base from "../../../layouts/Base.astro";
+import Base from "../../../../layouts/Base.astro";
 import { render } from "astro:content";
-import { published, relatedLetters } from "../../../lib/content";
-import { formatFullDate } from "../../../lib/dates";
-import { FACETS, tagLabel } from "../../../lib/tags";
-import { bookOf, bookSlug, bookName } from "../../../lib/osis";
+import { published, relatedLetters } from "../../../../lib/content";
+import { formatFullDate } from "../../../../lib/dates";
+import { FACETS, tagLabel } from "../../../../lib/tags";
+import { bookOf, bookSlug, bookName } from "../../../../lib/osis";
 
 export async function getStaticPaths() {
   const letters = await published("letters");
@@ -31,6 +31,7 @@ const readings = letter.data.readings.filter(
 );
 ---
 <Base
+  order="elders"
   title={`${letter.data.title} · The Order of Elders`}
   description={letter.data.excerpt}
   image="https://riotexas.orderofelders.org/og-riotexas.png"

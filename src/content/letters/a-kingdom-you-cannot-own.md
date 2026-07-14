@@ -4,6 +4,8 @@ date: 2026-07-22
 author: "Celia Halfacre"
 excerpt: "On buried treasure, invasive weeds, and a kingdom that arrives whether or not we are ready for it."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 12 (17)"
 occasionId: "proper-12-17-a"
 season: "Season after Pentecost"

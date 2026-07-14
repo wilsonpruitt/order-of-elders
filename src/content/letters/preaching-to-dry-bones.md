@@ -4,6 +4,8 @@ date: 2026-03-18
 author: "Celia Halfacre"
 excerpt: "On a drought, a river that stopped running, and the foolishness of speaking life to what is obviously dead."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Fifth Sunday in Lent"
 occasionId: "fifth-sunday-in-lent-a"
 season: "Lent"

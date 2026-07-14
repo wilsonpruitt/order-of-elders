@@ -4,6 +4,8 @@ date: 2026-04-15
 author: "Celia Halfacre"
 excerpt: "On Acts as a window rather than a blueprint, and the honest question of whether you are carrying more than you were meant to carry alone."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Third Sunday of Easter"
 occasionId: "third-sunday-of-easter-a"
 season: "Easter"

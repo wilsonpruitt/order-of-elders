@@ -4,6 +4,8 @@ date: 2026-06-03
 author: "Celia Halfacre"
 excerpt: "On sin and sickness as forms of separation, and a physician determined to cross every barrier we build."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Proper 5 (10)"
 occasionId: "proper-5-10-a"
 season: "Season after Pentecost"

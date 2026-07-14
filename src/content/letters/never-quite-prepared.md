@@ -4,6 +4,8 @@ date: 2026-05-13
 author: "Celia Halfacre"
 excerpt: "On years of having seen some things, a Spirit entirely beyond our control, and how little any of it prepares us."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Seventh Sunday of Easter"
 occasionId: "seventh-sunday-of-easter-a"
 season: "Easter"

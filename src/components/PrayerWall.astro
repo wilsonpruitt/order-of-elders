@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatFullDate } from "../lib/dates";
+
+interface Props {
+  prayers: CollectionEntry<"prayers">[];
+  submitHref: string;
+}
+const { prayers, submitHref } = Astro.props;
+---
+<section class="prayers" id="prayers">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label" style="color:var(--red)">The Prayer Wall</p>
+        <h2 class="sec">Prayers of the order</h2>
+      </div>
+      <a class="more" href={submitHref}>Submit a request &rarr;</a>
+    </div>
+    {prayers.length > 0 ? (
+      <div class="wall">
+        {prayers.map((prayer) => (
+          <article class:list={["prayer", { answered: prayer.data.status === "answered" }]}>
+            <div class="meta">
+              <span>{formatFullDate(prayer.data.date)}</span>
+              {prayer.data.kind === "thanksgiving" && <span class="tag">Thanksgiving</span>}
+            </div>
+            <p>{prayer.data.request}</p>
+            <span class="who">&mdash; {prayer.data.attribution ?? "submitted by a member of the order"}</span>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty">
+        <h3>The wall is open.</h3>
+        <p>No prayers have been posted yet. The first will be one of ours.</p>
+        <a class="cta" href={submitHref}>Submit a request</a>
+      </div>
+    )}
+    <p class="note">Requests are reviewed before posting. Please share only what is yours to share — first names or initials for others, and no medical or personal details without consent.</p>
+  </div>
+</section>
+
+<style>
+  h2.sec { color: var(--ink); }
+
+  .prayers { border-top: 1px solid var(--hair); padding: 72px 0; }
+  .prayers .head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
+  @media (max-width: 860px) { .wall { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 580px) { .wall { grid-template-columns: 1fr; } }
+  .prayer { background: #FBFAF5; border: 1px solid var(--hair); border-top: 3px solid var(--red); padding: 26px 26px 22px; display: flex; flex-direction: column; gap: .7rem; }
+  .prayer.answered { border-top-color: var(--gold); }
+  .prayer .meta { display: flex; justify-content: space-between; gap: 10px; font-family: "Archivo", sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--smoke); }
+  .prayer .meta .tag { color: var(--gold); }
+  .prayer p { font-size: .98rem; color: #3B362E; flex: 1; }
+  .prayer .who { font-family: "EB Garamond", serif; font-style: italic; color: var(--smoke); }
+  .prayers .note { margin-top: 26px; font-size: .9rem; color: var(--smoke); max-width: 66ch; }
+
+  .empty {
+    margin-top: 8px; background: #FBFAF5; border: 1px solid var(--hair);
+    border-top: 3px solid var(--red); padding: 52px 26px; text-align: center;
+  }
+  .empty h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.6rem; }
+  .empty p { color: var(--smoke); margin: .5rem 0 0; }
+  .empty .cta { margin-top: 1.6rem; }
+  .cta {
+    display: inline-block; margin-top: 1.4rem; padding: 14px 26px;
+    background: var(--red); color: #F7F3EA; border: none;
+    font-family: "Archivo", sans-serif; font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .cta:hover { background: var(--red-deep); text-decoration: none; }
+</style>

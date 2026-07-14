@@ -4,6 +4,8 @@ date: 2026-03-25
 author: "Celia Halfacre"
 excerpt: "On the faces along the parade route, and a shout of Hosanna already shadowed by another cry."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Liturgy of the Passion"
 occasionId: "liturgy-of-the-passion-a"
 season: "Holy Week"

@@ -4,6 +4,8 @@ date: 2026-02-04
 author: "Celia Halfacre"
 excerpt: "On turning fifty without having learned how to do life, and choosing love when power would be so much easier."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Fifth Sunday after the Epiphany"
 occasionId: "fifth-sunday-after-the-epiphany-a"
 season: "Epiphany"

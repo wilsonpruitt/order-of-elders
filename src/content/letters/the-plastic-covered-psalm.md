@@ -4,6 +4,8 @@ date: 2026-04-22
 author: "Celia Halfacre"
 excerpt: "On a psalm we save for funerals the way a grandmother saves a couch under plastic — and the rest we refuse ourselves."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Fourth Sunday of Easter"
 occasionId: "fourth-sunday-of-easter-a"
 season: "Easter"

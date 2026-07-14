@@ -4,6 +4,8 @@ date: 2026-06-10
 author: "Celia Halfacre"
 excerpt: "On evangelism with empty hands, elaborate travel plans, and a Holy Spirit with a well-documented sense of humor."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Proper 6 (11)"
 occasionId: "proper-6-11-a"
 season: "Season after Pentecost"

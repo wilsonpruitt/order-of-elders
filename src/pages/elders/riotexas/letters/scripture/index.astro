@@ -1,7 +1,7 @@
 ---
-import Base from "../../../../layouts/Base.astro";
-import { scriptureIndex } from "../../../../lib/content";
-import { bookName, bookSlug, canonicalIndex } from "../../../../lib/osis";
+import Base from "../../../../../layouts/Base.astro";
+import { scriptureIndex } from "../../../../../lib/content";
+import { bookName, bookSlug, canonicalIndex } from "../../../../../lib/osis";
 
 const index = await scriptureIndex();
 
@@ -17,6 +17,7 @@ const books = [...index.entries()]
 const preachedTotal = books.reduce((n, b) => n + b.preached, 0);
 ---
 <Base
+  order="elders"
   title="Letters by scripture · The Order of Elders"
   description="Every letter to the order, indexed by the scripture it preaches and by the readings appointed for the day."
   image="https://riotexas.orderofelders.org/og-riotexas.png"

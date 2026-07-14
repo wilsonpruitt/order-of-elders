@@ -4,6 +4,8 @@ date: 2026-07-15
 author: "Celia Halfacre"
 excerpt: "On Jacob's rock pillow, a parishioner in the emergency room, and why we are still surprised when God shows up."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 11 (16)"
 occasionId: "proper-11-16-a"
 season: "Season after Pentecost"

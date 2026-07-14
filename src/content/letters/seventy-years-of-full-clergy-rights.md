@@ -4,6 +4,8 @@ date: 2026-04-22
 author: "Lisa Straus"
 excerpt: "A guest letter marking the 1956 decision that opened ordination to women — and a call to male colleagues to say so out loud."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Fourth Sunday of Easter"
 occasionId: "fourth-sunday-of-easter-a"
 season: "Easter"

@@ -3,19 +3,44 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "^/assets/(.*)$",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "continue": true
-    },
-    {
       "src": "^/_astro/(.*)$",
       "headers": { "cache-control": "public, max-age=31536000, immutable" },
       "continue": true
     },
     {
-      "src": "^/(?!_astro/|assets/|favicon\\.svg)(.*)$",
-      "dest": "/riotexas/$1",
+      "src": "^/(?!_astro/)(.*)$",
+      "dest": "/elders/riotexas/$1",
       "has": [{ "type": "host", "value": "riotexas.orderofelders.org" }],
+      "check": true
+    },
+    {
+      "src": "^/(?!_astro/)(.*)$",
+      "dest": "/elders/$1",
+      "has": [{ "type": "host", "value": "orderofelders.org" }],
+      "check": true
+    },
+    {
+      "src": "^/(?!_astro/)(.*)$",
+      "dest": "/deacons/riotexas/$1",
+      "has": [{ "type": "host", "value": "riotexas.orderofdeacons.org" }],
+      "check": true
+    },
+    {
+      "src": "^/(?!_astro/)(.*)$",
+      "dest": "/deacons/$1",
+      "has": [{ "type": "host", "value": "orderofdeacons.org" }],
+      "check": true
+    },
+    {
+      "src": "^/(?!_astro/)(.*)$",
+      "dest": "/local-pastors/riotexas/$1",
+      "has": [{ "type": "host", "value": "riotexas.fellowshipoflocalpastors.org" }],
+      "check": true
+    },
+    {
+      "src": "^/(?!_astro/)(.*)$",
+      "dest": "/local-pastors/$1",
+      "has": [{ "type": "host", "value": "fellowshipoflocalpastors.org" }],
       "check": true
     },
     { "handle": "filesystem" },

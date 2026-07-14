@@ -4,6 +4,8 @@ date: 2026-05-27
 author: "Celia Halfacre"
 excerpt: "On skipping the doctrinal sermon and asking instead what it means that none of us carries the image of God alone."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Trinity Sunday"
 occasionId: "trinity-sunday-a"
 season: "Season after Pentecost"

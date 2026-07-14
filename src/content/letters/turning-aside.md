@@ -4,6 +4,8 @@ date: 2026-08-26
 author: "Celia Halfacre"
 excerpt: "On Moses and the sheep, the numbing routine of the work, and how many burning bushes we walk straight past."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 17 (22)"
 occasionId: "proper-17-22-a"
 season: "Season after Pentecost"

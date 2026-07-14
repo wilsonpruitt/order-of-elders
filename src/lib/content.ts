@@ -8,6 +8,9 @@ import { bookOf } from "./osis";
  * requests reached the public wall.
  */
 
+export type Order = "elders" | "deacons" | "local-pastors";
+export type Conference = "riotexas";
+
 function isPublishable(data: { draft?: boolean; expires?: Date }, now: Date): boolean {
   if (data.draft) return false;
   if (data.expires && data.expires.valueOf() < now.valueOf()) return false;
@@ -22,16 +25,22 @@ export async function published<C extends "letters" | "prayers" | "events">(
   return entries.filter((entry) => isPublishable(entry.data, now));
 }
 
-export async function publishedLetters() {
-  return (await published("letters")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+export async function publishedLetters(order: Order, conference: Conference) {
+  return (await published("letters"))
+    .filter((entry) => entry.data.order === order && entry.data.conference === conference)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
-export async function publishedPrayers() {
-  return (await published("prayers")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+export async function publishedPrayers(order: Order, conference: Conference) {
+  return (await published("prayers"))
+    .filter((entry) => entry.data.order === order && entry.data.conference === conference)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
-export async function publishedEvents() {
-  return (await published("events")).sort((a, b) => a.data.start.valueOf() - b.data.start.valueOf());
+export async function publishedEvents(order: Order, conference: Conference) {
+  return (await published("events"))
+    .filter((entry) => entry.data.orders.includes(order) && entry.data.conference === conference)
+    .sort((a, b) => a.data.start.valueOf() - b.data.start.valueOf());
 }
 
 /* -------------------------------------------------------------------------- */
@@ -52,7 +61,7 @@ export interface TagUse {
 /** Every tag actually in use, with how many letters carry it. Unused vocabulary is
  *  not shown: a filter that returns nothing is worse than no filter. */
 export async function tagsInUse(): Promise<TagUse[]> {
-  const letters = await publishedLetters();
+  const letters = await publishedLetters("elders", "riotexas");
   const counts = new Map<string, number>();
   for (const letter of letters) {
     for (const facet of FACET_KEYS) {
@@ -70,7 +79,7 @@ export async function tagsInUse(): Promise<TagUse[]> {
 }
 
 export async function lettersByTag(facet: FacetKey, tag: string): Promise<Letter[]> {
-  const letters = await publishedLetters();
+  const letters = await publishedLetters("elders", "riotexas");
   return letters.filter((letter) => letter.data.tags[facet].includes(tag as never));
 }
 
@@ -87,7 +96,7 @@ export interface ScriptureUse {
  * that Sunday" are different claims, and collapsing them would overstate the archive.
  */
 export async function scriptureIndex(): Promise<Map<string, ScriptureUse["letters"]>> {
-  const letters = await publishedLetters();
+  const letters = await publishedLetters("elders", "riotexas");
   const index = new Map<string, ScriptureUse["letters"]>();
 
   const add = (
@@ -139,7 +148,7 @@ export interface Related {
  * true of most of the corpus and so connects almost nothing.
  */
 export async function relatedLetters(letter: Letter, limit = 3): Promise<Related[]> {
-  const letters = await publishedLetters();
+  const letters = await publishedLetters("elders", "riotexas");
   const scored: Related[] = [];
 
   for (const other of letters) {

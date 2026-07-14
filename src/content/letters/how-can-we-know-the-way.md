@@ -4,6 +4,8 @@ date: 2026-04-29
 author: "Celia Halfacre"
 excerpt: "On Thomas the practical and the needy — snarky, sarcastic, and brave enough to ask for what he needed when he needed it."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Fifth Sunday of Easter"
 occasionId: "fifth-sunday-of-easter-a"
 season: "Easter"

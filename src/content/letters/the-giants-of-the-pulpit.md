@@ -4,6 +4,8 @@ date: 2026-01-21
 author: "Celia Halfacre"
 excerpt: "On preaching where giants preached, and a God who works through small, bumbling people."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Third Sunday after the Epiphany"
 occasionId: "third-sunday-after-the-epiphany-a"
 season: "Epiphany"

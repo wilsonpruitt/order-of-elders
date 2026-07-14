@@ -4,6 +4,8 @@ date: 2026-07-29
 author: "Celia Halfacre"
 excerpt: "On a grabby, conniving scoundrel forced to say his own name out loud — and a God who still will not let go."
 draft: true
+order: elders
+conference: riotexas
 occasion: "Proper 13 (18)"
 occasionId: "proper-13-18-a"
 season: "Season after Pentecost"

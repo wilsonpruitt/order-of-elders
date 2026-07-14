@@ -4,6 +4,8 @@ date: 2026-03-04
 author: "Celia Halfacre"
 excerpt: "On the woman at the well, the sins we assume she committed, and a gospel that refuses to flatten anyone into a single story."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Third Sunday in Lent"
 occasionId: "third-sunday-in-lent-a"
 season: "Lent"

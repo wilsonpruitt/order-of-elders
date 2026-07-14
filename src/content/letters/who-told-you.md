@@ -4,6 +4,8 @@ date: 2026-02-18
 author: "Celia Halfacre"
 excerpt: "On fig leaves, the shame that enters and stays, and a God who co-suffers rather than standing apart from our wounds."
 draft: false
+order: elders
+conference: riotexas
 occasion: "First Sunday in Lent"
 occasionId: "first-sunday-in-lent-a"
 season: "Lent"

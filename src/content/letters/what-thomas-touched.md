@@ -4,6 +4,8 @@ date: 2026-04-08
 author: "Celia Halfacre"
 excerpt: "On whether they were scars or still open wounds — and a resurrection that transforms suffering without erasing it."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Second Sunday of Easter"
 occasionId: "second-sunday-of-easter-a"
 season: "Easter"

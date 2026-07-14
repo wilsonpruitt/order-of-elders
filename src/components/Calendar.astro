@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatShortMonth, formatDay } from "../lib/dates";
+
+interface Props {
+  events: CollectionEntry<"events">[];
+}
+const { events } = Astro.props;
+---
+<section class="cal" id="calendar">
+  <div class="wrap">
+    <p class="label" style="color:var(--red)">Calendar</p>
+    <h2 class="sec">Gatherings of the order</h2>
+
+    {events.map((event) => (
+      <div class="event">
+        <div class="date">
+          <span class="m">{formatShortMonth(event.data.start)}</span>
+          <span class="d">{formatDay(event.data.start)}</span>
+        </div>
+        <div>
+          <span class="kind">{event.data.kind}</span>
+          <h3>{event.data.title}</h3>
+          {event.data.location && <p class="where">{event.data.location}</p>}
+        </div>
+      </div>
+    ))}
+
+    <p class="subscribe"><a class="more" href="/calendar.ics">Subscribe to the calendar (.ics) &rarr;</a></p>
+  </div>
+</section>
+
+<style>
+  h2.sec { color: var(--ink); }
+
+  .cal { border-top: 1px solid var(--hair); padding: 72px 0; }
+  .event { display: grid; grid-template-columns: 96px 1fr auto; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--hair); }
+  @media (max-width: 580px) { .event { grid-template-columns: 72px 1fr; } }
+  .date { border: 1px solid var(--red); text-align: center; padding: 10px 6px; font-family: "Archivo", sans-serif; font-weight: 600; text-transform: uppercase; }
+  .date .m { display: block; font-size: .66rem; letter-spacing: .16em; color: var(--red); }
+  .date .d { display: block; font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.7rem; line-height: 1.1; color: var(--ink); }
+  .event h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.3rem; }
+  .event .where { font-size: .9rem; color: var(--smoke); }
+  .event .kind { font-family: "Archivo", sans-serif; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .cal .subscribe { margin-top: 26px; }
+</style>

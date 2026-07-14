@@ -1,10 +1,10 @@
 ---
-import Base from "../../../layouts/Base.astro";
-import { publishedLetters, tagsInUse } from "../../../lib/content";
-import { formatFullDate } from "../../../lib/dates";
-import { FACETS, tagLabel } from "../../../lib/tags";
+import Base from "../../../../layouts/Base.astro";
+import { publishedLetters, tagsInUse } from "../../../../lib/content";
+import { formatFullDate } from "../../../../lib/dates";
+import { FACETS, tagLabel } from "../../../../lib/tags";
 
-const letters = await publishedLetters();
+const letters = await publishedLetters("elders", "riotexas");
 const used = await tagsInUse();
 
 // Only offer filters that actually return something — a chip that leads to an empty
@@ -16,6 +16,7 @@ const groups = FACETS.map((facet) => ({
 })).filter((g) => g.tags.length > 0);
 ---
 <Base
+  order="elders"
   title="All letters · The Order of Elders"
   description="Letters to the order from the chair of the Río Texas Conference — searchable by what you're carrying, by theme, and by scripture."
   image="https://riotexas.orderofelders.org/og-riotexas.png"

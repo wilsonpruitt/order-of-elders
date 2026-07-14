@@ -4,6 +4,8 @@ date: 2026-01-14
 author: "Celia Halfacre"
 excerpt: "On revelation that arrives by the drip rather than the gallon, and the slow faithfulness of abiding together."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Second Sunday after the Epiphany"
 occasionId: "second-sunday-after-the-epiphany-a"
 season: "Epiphany"

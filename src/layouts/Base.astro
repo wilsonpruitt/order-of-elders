@@ -1,18 +1,35 @@
 ---
 import "../styles/tokens.css";
 
+export type Order = "elders" | "deacons" | "local-pastors";
+
+const SITE_NAMES: Record<Order, string> = {
+  elders: "The Order of Elders",
+  deacons: "The Order of Deacons",
+  "local-pastors": "The Fellowship of Local Pastors and Associate Members",
+};
+
+const DEFAULT_DESCRIPTIONS: Record<Order, string> = {
+  elders: "An independent project of elders, for elders — letters, prayer, and the calendar of the order, made visible.",
+  deacons: "An independent project of deacons, for deacons — prayer and the calendar of the order, made visible.",
+  "local-pastors": "An independent project of local pastors and associate members, for local pastors and associate members — prayer and the calendar of the Fellowship, made visible.",
+};
+
 interface Props {
   title: string;
+  order: Order;
   description?: string;
   image?: string;
   url?: string;
 }
 const {
   title,
-  description = "An independent project of elders, for elders — letters, prayer, and the calendar of the order, made visible.",
+  order,
+  description = DEFAULT_DESCRIPTIONS[order],
   image,
   url,
 } = Astro.props;
+const siteName = SITE_NAMES[order];
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +47,7 @@ const {
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="The Order of Elders" />
+  <meta property="og:site_name" content={siteName} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   {url && <meta property="og:url" content={url} />}

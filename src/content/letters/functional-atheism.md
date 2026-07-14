@@ -4,6 +4,8 @@ date: 2026-05-06
 author: "Celia Halfacre"
 excerpt: "On leading as though everything depends on you, and a promise that you will not be left orphaned."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Sixth Sunday of Easter"
 occasionId: "sixth-sunday-of-easter-a"
 season: "Easter"

@@ -4,6 +4,8 @@ date: 2026-01-07
 author: "Celia Halfacre"
 excerpt: "On a servant who won't snap what is already bent — and the baptismal vows that make that work ours."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Baptism of the Lord"
 occasionId: "baptism-of-the-lord-a"
 season: "Epiphany"

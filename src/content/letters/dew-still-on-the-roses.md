@@ -4,6 +4,8 @@ date: 2026-04-01
 author: "Celia Halfacre"
 excerpt: "On arriving at the garden exhausted, being called by name, and the gift of an Easter afternoon nap."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Resurrection of the Lord"
 occasionId: "resurrection-of-the-lord-a"
 season: "Easter"

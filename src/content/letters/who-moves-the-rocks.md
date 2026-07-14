@@ -4,6 +4,8 @@ date: 2026-07-08
 author: "Celia Halfacre"
 excerpt: "On the parable of the sower — who tends the soil of our lives, and whose rocks we still cling to because familiar feels safer than free."
 draft: false
+order: elders
+conference: riotexas
 occasion: "Proper 10 (15)"
 occasionId: "proper-10-15-a"
 season: "Season after Pentecost"

@@ -1,0 +1,128 @@
+---
+import Base from "../../layouts/Base.astro";
+import Fourfold from "../../components/Fourfold.astro";
+---
+<Base
+  order="local-pastors"
+  title="The Fellowship of Local Pastors and Associate Members"
+  description="Licensed pastors share with the elders the responsibilities and duties of a pastor for this fourfold ministry, within the context of their appointment. An independent project of local pastors and associate members, made visible one conference at a time."
+  image="https://fellowshipoflocalpastors.org/og-landing.png"
+  url="https://fellowshipoflocalpastors.org/"
+>
+  <header class="hero">
+    <div class="frame" aria-hidden="true"></div>
+    <div class="hero-text">
+      <p class="label">The United Methodist Church</p>
+      <h1>The Fellowship of Local Pastors and Associate Members</h1>
+      <blockquote>
+        "Each annual conference shall organize a Fellowship of Local Pastors and Associate Members&hellip; The Fellowship will provide mutual support for its members for the sake of the life and mission of the church."
+        <cite>The Book of Discipline, &para; 323</cite>
+      </blockquote>
+    </div>
+  </header>
+
+  <main>
+    <section class="conferences">
+      <div class="wrap">
+        <p class="label">Conference chapters</p>
+        <h2>Find your fellowship</h2>
+        <div class="confgrid">
+          <article class="confcard">
+            <h3>R&iacute;o Texas Conference</h3>
+            <p>A public prayer wall and the calendar of retreats and gatherings for the local pastors and associate members of the R&iacute;o Texas Annual Conference.</p>
+            <a class="go" href="https://riotexas.fellowshipoflocalpastors.org">riotexas.fellowshipoflocalpastors.org &rarr;</a>
+          </article>
+          <article class="confcard invite">
+            <h3>Your conference</h3>
+            <p>This site is built to grow. If your conference's Fellowship of Local Pastors and Associate Members would like a home here &mdash; prayer, calendar, and more &mdash; we would be glad to help you start one.</p>
+            <a class="go" href="mailto:hello@fellowshipoflocalpastors.org">Write to us &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <Fourfold
+      framed
+      intro="Licensed pastors share with the elders the responsibilities and duties of a pastor for this fourfold ministry, within the context of their appointment."
+      items={[
+        { name: "Word", sub: "preaching · teaching · counsel", body: "To preach the Word of God, lead in worship, teach the Scriptures, and engage the people in study and witness — ensuring the faithful transmission of the Christian faith." },
+        { name: "Sacrament", sub: "font · table", body: "To administer the sacraments of baptism and the Supper of the Lord according to Christ's ordinance, and to encourage the congregational use of the means of grace." },
+        { name: "Order", sub: "administration · oversight · connection", body: "To order the life of the church for mission and ministry; to equip lay leadership; to administer the provisions of the Discipline within the connection." },
+        { name: "Service", sub: "servant ministry · servant leadership", body: "To embody the teachings of Jesus in servant ministries, building the body of Christ as a caring and giving community, extending the ministry of Christ to the world." },
+      ]}
+    />
+
+    <section class="purpose">
+      <div class="wrap cols">
+        <h2>Mutual support, for the sake of the mission</h2>
+        <div>
+          <p>Every local pastor and associate member belongs to the Fellowship &mdash; gathered for continuing formation, a bond of unity and common commitment, and relationships of mutual support and trust (&para; 323). But between annual conferences, that fellowship can be hard to see.</p>
+          <p>This site exists to make the ordinary life of the Fellowship visible: the prayers we carry and the days we set apart to gather. It begins with what can be shared publicly, and it grows as the Fellowship asks it to.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Fragment slot="footer">
+    <span class="mark">The Fellowship of Local Pastors and Associate Members</span>
+    <p>An independent project of local pastors and associate members, for local pastors and associate members. Not an official agency of The United Methodist Church. Quotations from <em>The Book of Discipline of The United Methodist Church</em> are used for the Fellowship's formation and reference.</p>
+    <p class="siblings">The other orders: <a href="https://orderofelders.org">The Order of Elders</a> &middot; <a href="https://orderofdeacons.org">The Order of Deacons</a></p>
+  </Fragment>
+</Base>
+
+<style>
+  /* ---------- hero: the appointment, a bounded frame ---------- */
+  .hero { position: relative; text-align: center; padding: 96px 24px 84px; }
+  .frame {
+    position: absolute; inset: 28px; border: 2px solid var(--red); pointer-events: none;
+  }
+  .frame::after {
+    content: "\271B"; position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%);
+    color: var(--gold); font-size: 15px; line-height: 1; background: var(--paper); padding: 0 8px;
+  }
+  .hero-text { position: relative; z-index: 1; }
+  .hero .label { color: var(--smoke); }
+  .hero h1 {
+    font-family: "EB Garamond", serif; font-weight: 500;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    letter-spacing: .01em; line-height: 1.1;
+    margin: .5rem 0 1.6rem;
+  }
+  .hero blockquote {
+    max-width: 560px; margin: 0 auto;
+    font-family: "EB Garamond", serif; font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.5; color: var(--red-deep);
+  }
+  .hero cite {
+    display: block; margin-top: 1rem; font-style: normal;
+    font-family: "Archivo", sans-serif; font-size: .72rem; font-weight: 600;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--smoke);
+  }
+  @media (max-width: 560px) {
+    .frame { inset: 16px; }
+    .hero { padding-top: 72px; }
+  }
+
+  /* ---------- conferences ---------- */
+  .conferences { border-top: 1px solid var(--hair); padding: 84px 0; }
+  .conferences .label { color: var(--red); }
+  .conferences h2 { font-family: "EB Garamond", serif; font-weight: 500; font-size: 2.2rem; margin: .4rem 0 2rem; }
+  .confgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 680px) { .confgrid { grid-template-columns: 1fr; } }
+  .confcard {
+    border: 1px solid var(--hair); background: #FBFAF5; padding: 36px 34px;
+    border-top: 4px solid var(--red);
+    display: flex; flex-direction: column; gap: .6rem;
+  }
+  .confcard.invite { border-top-color: var(--gold); background: transparent; }
+  .confcard h3 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.5rem; }
+  .confcard p { font-size: .97rem; color: #3B362E; flex: 1; }
+  .confcard .go { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+
+  /* ---------- purpose ---------- */
+  .purpose { border-top: 1px solid var(--hair); padding: 84px 0; }
+  .purpose .cols { display: grid; grid-template-columns: 280px 1fr; gap: 48px; }
+  @media (max-width: 760px) { .purpose .cols { grid-template-columns: 1fr; gap: 20px; } }
+  .purpose h2 { font-family: "EB Garamond", serif; font-weight: 500; font-size: 2rem; line-height: 1.2; }
+  .purpose p { margin-bottom: 1rem; max-width: 58ch; }
+</style>
