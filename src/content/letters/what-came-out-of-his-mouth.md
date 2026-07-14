@@ -3,7 +3,7 @@ title: "What Came Out of His Mouth"
 date: 2026-08-12
 author: "Celia Halfacre"
 excerpt: "On the hardest thing to say about this text — that our savior insults a foreigner, and is redeemed by her faith."
-draft: true
+draft: false
 order: elders
 conference: riotexas
 occasion: "Proper 15 (20)"

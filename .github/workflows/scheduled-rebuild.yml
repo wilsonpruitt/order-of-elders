@@ -1,0 +1,47 @@
+# Rebuilds the site on a schedule so that time-based content appears on its own date.
+#
+# The site is static, so `isPublishable` (src/lib/content.ts) evaluates dates at BUILD
+# time, not request time. Without a rebuild, a letter dated next Wednesday would stay
+# invisible forever and an expired prayer would stay on the wall forever. This is the
+# thing that makes the clock tick.
+#
+# Runs daily at 08:00 UTC — 03:00 America/Chicago (CDT), so a letter dated Wednesday is
+# live before anyone is awake to read it. Daily rather than weekly because prayer
+# `expires` dates need it too, and a no-op build costs about four seconds.
+#
+# Setup (one-time, in the Vercel dashboard):
+#   1. Project Settings -> Git -> Deploy Hooks -> create a hook on branch `master`.
+#   2. Copy the URL into this repo: Settings -> Secrets and variables -> Actions ->
+#      New repository secret, named VERCEL_DEPLOY_HOOK.
+# The hook builds from master HEAD, whose commit author satisfies the Vercel team's
+# author gate, so the deploy is not rejected.
+
+name: Scheduled rebuild
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch: # so it can be triggered by hand from the Actions tab
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger a Vercel production deploy
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::error::VERCEL_DEPLOY_HOOK is not set — scheduled letters will not publish."
+            echo "Create a Deploy Hook in Vercel (Settings -> Git -> Deploy Hooks) and add"
+            echo "the URL as a repository secret named VERCEL_DEPLOY_HOOK."
+            exit 1
+          fi
+          code=$(curl -sS -X POST "$HOOK" -o response.json -w '%{http_code}')
+          cat response.json
+          echo
+          if [ "$code" -lt 200 ] || [ "$code" -ge 300 ]; then
+            echo "::error::Deploy hook returned HTTP $code"
+            exit 1
+          fi
+          echo "Deploy triggered."

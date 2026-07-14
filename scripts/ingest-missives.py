@@ -262,8 +262,7 @@ def yaml_ref(ref: dict, indent: str) -> str:
 
 
 def write_letters(rows: list, meta: dict) -> None:
-    today = date(2026, 7, 14)
-    written, skipped, held = [], [], []
+    written, skipped, held, scheduled = [], [], [], []
 
     for row in rows:
         m = meta[row["drive_doc"]]
@@ -280,10 +279,17 @@ def write_letters(rows: list, meta: dict) -> None:
         if m.get("trailing") == "keep" and trailing:
             body = f"{body}\n\n{trailing}"
 
+        # `draft` means "never publish this" (a superseded letter), and only the
+        # editorial metadata may set it. A letter dated in the future is SCHEDULED, not
+        # drafted — the site hides it until its date and a nightly rebuild reveals it
+        # (see isPublishable in src/lib/content.ts). Auto-drafting future letters here
+        # would silently undo that schedule on every re-run.
+        draft = bool(m.get("draft"))
         letter_date = date.fromisoformat(row["date"])
-        draft = bool(m.get("draft")) or letter_date > today
         if draft:
             held.append((slug, row["date"]))
+        elif letter_date > date.today():
+            scheduled.append((slug, row["date"]))
 
         ref = m["epigraph"]
         fm = [
@@ -323,8 +329,12 @@ def write_letters(rows: list, meta: dict) -> None:
         written.append(slug)
 
     print(f"\n    wrote {len(written)} letters, backfilled {len(skipped)} existing")
+    if scheduled:
+        print(f"    scheduled ({len(scheduled)} publish on their own date):")
+        for slug, when in scheduled:
+            print(f"      {when}  {slug}")
     if held:
-        print(f"    held as drafts ({len(held)} not yet sent):")
+        print(f"    held as drafts ({len(held)} will never publish):")
         for slug, when in held:
             print(f"      {when}  {slug}")
 

@@ -11,9 +11,29 @@ import { bookOf } from "./osis";
 export type Order = "elders" | "deacons" | "local-pastors";
 export type Conference = "riotexas";
 
-function isPublishable(data: { draft?: boolean; expires?: Date }, now: Date): boolean {
+/**
+ * `draft` and the date are separate gates, and the distinction matters.
+ *
+ * `draft: true` means "never publish this" — a letter that was written but superseded,
+ * a prayer awaiting a moderator. The date means "publish this on that day": the chair
+ * writes several weeks ahead, and a letter dated next Wednesday stays hidden until
+ * next Wednesday. That is a schedule, not a draft, and conflating the two is how you
+ * end up hand-flipping a boolean every week.
+ *
+ * Letters only. A future-dated *event* obviously belongs in the calendar before it
+ * happens, and a prayer is dated when it is posted.
+ *
+ * Note this is evaluated at BUILD time, not request time — so a scheduled letter
+ * appears only once something rebuilds the site. See .github/workflows/scheduled-rebuild.yml.
+ */
+function isPublishable(
+  collection: "letters" | "prayers" | "events",
+  data: { draft?: boolean; expires?: Date; date?: Date },
+  now: Date,
+): boolean {
   if (data.draft) return false;
   if (data.expires && data.expires.valueOf() < now.valueOf()) return false;
+  if (collection === "letters" && data.date && data.date.valueOf() > now.valueOf()) return false;
   return true;
 }
 
@@ -22,7 +42,7 @@ export async function published<C extends "letters" | "prayers" | "events">(
   now: Date = new Date(),
 ): Promise<CollectionEntry<C>[]> {
   const entries = await getCollection(collection);
-  return entries.filter((entry) => isPublishable(entry.data, now));
+  return entries.filter((entry) => isPublishable(collection, entry.data, now));
 }
 
 export async function publishedLetters(order: Order, conference: Conference) {

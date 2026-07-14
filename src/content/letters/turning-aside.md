@@ -3,7 +3,7 @@ title: "Turning Aside"
 date: 2026-08-26
 author: "Celia Halfacre"
 excerpt: "On Moses and the sheep, the numbing routine of the work, and how many burning bushes we walk straight past."
-draft: true
+draft: false
 order: elders
 conference: riotexas
 occasion: "Proper 17 (22)"

@@ -3,7 +3,7 @@ title: "Ego Eimi"
 date: 2026-08-05
 author: "Celia Halfacre"
 excerpt: "On translating when nobody asked you to, and finding 'I am' in the middle of the storm."
-draft: true
+draft: false
 order: elders
 conference: riotexas
 occasion: "Proper 14 (19)"

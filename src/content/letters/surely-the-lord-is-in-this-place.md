@@ -3,7 +3,7 @@ title: "Surely the Lord Is in This Place"
 date: 2026-07-15
 author: "Celia Halfacre"
 excerpt: "On Jacob's rock pillow, a parishioner in the emergency room, and why we are still surprised when God shows up."
-draft: true
+draft: false
 order: elders
 conference: riotexas
 occasion: "Proper 11 (16)"
