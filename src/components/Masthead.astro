@@ -5,19 +5,42 @@ interface Props {
   order: Order;
   title: string;
   conferenceLabel: string;
+  /**
+   * Interior pages (the letters archive) get a different nav. On the landing the
+   * section links are anchors into the page itself; from inside a letter those same
+   * links would only throw you back to the landing. So interior pages make the
+   * wordmark the way home and offer the archive's own destinations instead.
+   */
+  interior?: boolean;
+  /** Marks the current archive page, for `aria-current`. */
+  current?: "letters" | "scripture";
 }
-const { order, title, conferenceLabel } = Astro.props;
+const { order, title, conferenceLabel, interior = false, current } = Astro.props;
 ---
 <header class:list={["mast", `mast-${order}`]}>
   <div class="rules" aria-hidden="true"></div>
   <div class="wrap bar">
     <span class="label conf">{conferenceLabel}</span>
-    <h1>{title}</h1>
-    <nav aria-label="Site">
-      {order === "elders" && <a href="#letters">Letters</a>}
-      <a href="#prayers">Prayer Wall</a>
-      <a href="#calendar">Calendar</a>
-    </nav>
+    <h1>{interior ? <a href="/">{title}</a> : title}</h1>
+
+    {interior ? (
+      <nav aria-label="Site">
+        <a href="/letters" aria-current={current === "letters" ? "page" : undefined}>
+          All letters
+        </a>
+        <a href="/letters/scripture" aria-current={current === "scripture" ? "page" : undefined}>
+          By scripture
+        </a>
+        <a href="/#prayers">Prayer Wall</a>
+        <a href="/#calendar">Calendar</a>
+      </nav>
+    ) : (
+      <nav aria-label="Site">
+        {order === "elders" && <a href="#letters">Letters</a>}
+        <a href="#prayers">Prayer Wall</a>
+        <a href="#calendar">Calendar</a>
+      </nav>
+    )}
   </div>
 </header>
 
@@ -26,9 +49,12 @@ const { order, title, conferenceLabel } = Astro.props;
   .mast .bar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding: 22px 0; }
   .mast .conf { color: var(--smoke); }
   .mast h1 { font-family: "EB Garamond", serif; font-weight: 600; font-size: 1.5rem; letter-spacing: .01em; }
+  .mast h1 a { color: var(--ink); }
+  .mast h1 a:hover { color: var(--red); text-decoration: none; }
   nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
   nav a { font-family: "Archivo", sans-serif; font-weight: 600; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
   nav a:hover { color: var(--red); text-decoration: none; }
+  nav a[aria-current="page"] { color: var(--red); }
 
   /* elders: the stole seen edge-on — double rule */
   .mast-elders .rules {
